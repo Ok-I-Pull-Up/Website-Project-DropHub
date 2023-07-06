@@ -93,5 +93,13 @@ body {
 }
 .card .card__footer--premium button:hover,
 .card .card__footer--basic button:hover {
-  color: rgba(161, 8, 8, 0.6901960784);
+  color: rgba(134, 123, 123, 0.6901960784);
+}
+
+.card:nth-child(1) {
+  transform: rotateY(40deg);
+}
+
+.card:nth-child(1):hover {
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */
