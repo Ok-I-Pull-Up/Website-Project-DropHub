@@ -248,7 +248,7 @@ nav .navbar__mobile a:hover {
 }
 .header button:hover {
   color: #acacac;
-  box-shadow: 0 0 40px #a42312;
+  box-shadow: 0 0 0px #a42312;
 }
 
 .section__heading {
@@ -480,7 +480,8 @@ nav .navbar__mobile a:hover {
     font-size: 1.5rem;
   }
   .header button {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding: 15px;
   }
   .about .icons:nth-child(2) {
     left: 25%;
