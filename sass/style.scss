@@ -57,8 +57,17 @@ nav {
 			display: flex;
 			justify-content: flex-start;
 			width: 50%;
-			padding: 20px;
+			padding: 30px;
+
+			img {
+				height: 4rem;
+				width: 15rem;
+			}
 		}
+
+		
+
+		
 
 		&__menu {
 			display: none;
