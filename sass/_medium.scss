@@ -105,7 +105,6 @@
 		.icons:nth-child(4) {
 			left: 31%;
 		}
-
 		.about__block:nth-child(even) {
 			margin-left: 0;
 			margin-right: 25%;
@@ -114,6 +113,18 @@
 		.about__block:nth-child(odd) {
 			margin-left: 25%;
 			margin-right: 0;
+		}
+
+		.faq__text p {
+			margin-bottom: 1em;
+		}
+
+		.faq__text .question__title {
+			font-weight: bold;
+		}
+
+		.about__block span {
+			color: skyblue;
 		}
 	}
 

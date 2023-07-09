@@ -518,6 +518,15 @@ nav .navbar__mobile a:hover {
     margin-left: 25%;
     margin-right: 0;
   }
+  .faq .faq__text p {
+    margin-bottom: 1em;
+  }
+  .faq .faq__text .question__title {
+    font-weight: bold;
+  }
+  .faq .about__block span {
+    color: skyblue;
+  }
   .offers__cards {
     flex-direction: row;
     perspective: 900px;
