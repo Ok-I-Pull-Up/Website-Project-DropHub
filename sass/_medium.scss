@@ -1,0 +1,142 @@
+@media (min-width: 772px) {
+	nav {
+		.navbar {
+			font-size: 2rem;
+
+			&__logo {
+				width: 30%;
+			}
+
+			&__menu {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 40%;
+
+				a {
+					position: relative;
+					padding: 20px;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+
+			&__account {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: 30%;
+				padding: 20px;
+			}
+
+			&__burger {
+				display: none;
+			}
+
+			&__mobile {
+				display: none;
+			}
+		}
+	}
+
+	.header {
+		background-image: url('../img/header_max.jpg');
+
+		&__text {
+			padding: 0;
+			padding-left: 10%;
+			width: 90%;
+
+			h2 {
+				font-size: 3.5rem;
+			}
+
+			h1 {
+				font-size: 5rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+
+		button {
+			font-size: 3rem;
+		}
+	}
+
+	.about {
+		.icons:nth-child(2) {
+			left: 25%;
+		}
+
+		.icons:nth-child(3) {
+			left: 70%;
+		}
+
+		.icons:nth-child(4) {
+			left: 62%;
+		}
+
+		&__block {
+			width: 70%;
+		}
+
+		&__block:nth-child(even) {
+			margin-left: 25%;
+		}
+
+		&__block:nth-child(odd) {
+			margin-right: 25%;
+		}
+	}
+
+	.faq {
+		.icons:nth-child(2) {
+			left: 74%;
+		}
+
+		.icons:nth-child(3) {
+			left: 21%;
+		}
+
+		.icons:nth-child(4) {
+			left: 31%;
+		}
+
+		.about__block:nth-child(even) {
+			margin-left: 0;
+			margin-right: 25%;
+		}
+
+		.about__block:nth-child(odd) {
+			margin-left: 25%;
+			margin-right: 0;
+		}
+	}
+
+	.offers {
+		&__cards {
+			flex-direction: row;
+			perspective: 900px;
+		}
+
+		.card {
+			transform: rotateY(-40deg);
+			margin: 0 10rem;
+
+			&:hover {
+				transform: rotateY(0);
+			}
+		}
+
+		.card:nth-child(1) {
+			transform: rotateY(40deg);
+		}
+
+		.card:nth-child(1):hover {
+			transform: rotateY(0deg);
+		}
+	}
+}

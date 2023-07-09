@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+	.header {
+		&__text {
+			padding-right: 5%;
+			padding-left: 10%;
+
+			h2 {
+				font-size: 3.5rem;
+			}
+
+			h1 {
+				font-size: 5rem;
+				span {
+					white-space: nowrap;
+				}
+			}
+
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

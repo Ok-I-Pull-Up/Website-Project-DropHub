@@ -1,3 +1,19 @@
+@keyframes rotateRight {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes rotateLeft {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -360deg;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,96 +26,517 @@ html {
 }
 
 body {
-  background-color: #ccc8c8;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0d1b27;
+  color: #fff;
 }
 
-.cards {
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+nav .navbar {
+  display: flex;
+  font-size: 3rem;
+}
+nav .navbar__logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 20px;
+}
+nav .navbar__menu {
+  display: none;
+}
+nav .navbar__menu a {
+  position: relative;
+}
+nav .navbar__menu a::after,
+nav .navbar__menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5em;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+nav .navbar__menu a::after {
+  left: 50%;
+  transform-origin: left;
+}
+nav .navbar__menu a::before {
+  right: 50%;
+  transform-origin: right;
+}
+nav .navbar__menu a:hover::after,
+nav .navbar__menu a:hover::before {
+  transform: scaleX(0.4);
+}
+nav .navbar__menu a:hover::after {
+  transform-origin: left;
+}
+nav .navbar__menu a:hover::before {
+  transform-origin: right;
+}
+nav .navbar__account {
+  display: none;
+}
+nav .navbar__account p {
+  position: relative;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+nav .navbar__account p::after,
+nav .navbar__account p::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+nav .navbar__account p::after {
+  left: 50%;
+  transform-origin: left;
+}
+nav .navbar__account p::before {
+  right: 50%;
+  transform-origin: right;
+}
+nav .navbar__account p:hover::after,
+nav .navbar__account p:hover::before {
+  transform: scaleX(0.5);
+}
+nav .navbar__account p:hover::after {
+  transform-origin: left;
+}
+nav .navbar__account p:hover::before {
+  transform-origin: right;
+}
+nav .navbar__burger {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+nav .navbar__burger-icon {
+  padding: 20px;
+  cursor: pointer;
+}
+nav .navbar__mobile {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/cards.png");
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #232f56;
+  transform: translateX(100%);
+  transition: 0.3s ease-out;
+  z-index: 100;
+}
+nav .navbar__mobile--active {
+  transform: translateX(0);
+}
+nav .navbar__mobile-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  font-size: 5rem;
+  cursor: pointer;
+}
+nav .navbar__mobile a {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fff;
+}
+nav .navbar__mobile a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+nav .navbar__mobile a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+nav .navbar__mobile a:hover {
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/header_mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px #000;
+}
+.header__text {
+  padding: 30px;
+  cursor: default;
+}
+.header__text h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.header__text h1 {
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+.header__text-bold {
+  font-weight: bold;
+}
+.header__text p {
+  font-size: 1.5rem;
+}
+.header__socials {
+  padding: 10px 0;
+}
+.header__socials a {
+  margin-right: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+.header__socials a:hover {
+  color: #acacac;
+}
+.header button {
+  margin: 50px 0;
+  padding: 20px;
+  border-radius: 45px;
+  border: transparent;
+  box-shadow: 0 0 10px #a42312;
+  text-transform: uppercase;
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #a42312;
+  text-shadow: 2px 2px 3px black;
+  color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s, color 0.3s;
+}
+.header button:hover {
+  color: #acacac;
+  box-shadow: 0 0 40px #a42312;
+}
+
+.section__heading {
+  padding: 50px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 7rem;
+  cursor: default;
+}
+
+.about {
+  position: relative;
+}
+.about .icons {
+  position: absolute;
+  animation: rotateLeft 45s infinite linear;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+.about .icons:nth-child(2) {
+  top: 50%;
+  left: 20%;
+  rotate: -80deg;
+  font-size: 8rem;
+  animation: rotateRight 45s infinite linear;
+  animation-delay: -20s;
+}
+.about .icons:nth-child(3) {
+  top: 80%;
+  left: 70%;
+  rotate: 140deg;
+  font-size: 12rem;
+  animation-delay: -10s;
+}
+.about .icons:nth-child(4) {
+  top: 20%;
+  left: 62%;
+  rotate: 20deg;
+  font-size: 10rem;
+  animation-delay: -40s;
+}
+.about__blocks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 5rem;
+}
+.about__block {
+  padding: 20px;
+  margin: 5%;
+  border-radius: 20px;
+  background-color: rgba(21, 44, 64, 0.6);
+  transition: background-color 0.3s;
+}
+.about__block:hover {
+  background-color: #0d1b27;
+  box-shadow: 0 0 20px #232f56;
+}
+
+.faq .icons:nth-child(2) {
+  top: 50%;
+  left: 70%;
+}
+.faq .icons:nth-child(3) {
+  top: 80%;
+  left: 20%;
+}
+.faq .icons:nth-child(4) {
+  top: 20%;
+  left: 31%;
+  rotate: 20deg;
+}
+
+.offers {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-image: url("../img/cards.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 0 20px black;
-  perspective: 900px;
-  color: white;
+  box-shadow: 0 0 20px #000;
+  color: #fff;
 }
-
-.card {
+.offers__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+.offers .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 250px;
-  margin: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
+  min-width: 300px;
+  max-width: 350px;
+  margin: 4rem;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  transform: rotateY(-40deg);
   transition: transform 0.3s;
-  min-width: 20%;
 }
-.card:hover {
+.offers .card:hover {
   transform: rotateY(0);
 }
-.card__body {
+.offers .card__body {
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   text-transform: uppercase;
   padding: 40px 0;
 }
-.card__body h2 {
+.offers .card__body h2 {
   text-align: center;
   margin-bottom: 5px;
   font-size: 40px;
 }
-.card__body ul {
-  font-size: 12px;
+.offers .card__body ul {
+  font-size: 1.4rem;
   margin-bottom: 5px;
-  padding: 1.4em;
+  padding: 0 1.4em;
   text-align: center;
-  margin-top: auto;
+  margin-top: 20px;
 }
-.card__body ul li {
+.offers .card__body ul li {
   margin: 10px;
 }
-.card__body ul li span {
-  color: rgb(255, 0, 0);
+.offers .card__body ul li span {
+  color: #a42312;
   font-weight: bold;
 }
-.card .card__footer--premium,
-.card .card__footer--basic {
+.offers .card .card__footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: auto;
 }
-.card .card__footer--premium button,
-.card .card__footer--basic button {
+.offers .card .card__footer button {
   width: 150px;
-  padding: 6px;
+  padding: 1rem;
   margin-bottom: 15px;
   font-size: 1.7rem;
   border-radius: 10px;
   text-transform: uppercase;
-  background-color: black;
-  color: #ccc8c8;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #acacac;
+  border: transparent;
   font-weight: bold;
+  box-shadow: 0 0 10px #000;
   cursor: pointer;
-  transition: color 0.2s, box-shadow 0.3s;
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
-.card .card__footer--premium button:hover,
-.card .card__footer--basic button:hover {
-  color: rgba(134, 123, 123, 0.6901960784);
-}
-
-.card:nth-child(1) {
-  transform: rotateY(40deg);
+.offers .card .card__footer button:hover {
+  box-shadow: 0 0 20px #000;
+  background-color: #000;
+  color: #acacac;
 }
 
-.card:nth-child(1):hover {
-  transform: rotateY(0deg);
+@media (min-width: 576px) {
+  .header__text {
+    padding-right: 5%;
+    padding-left: 10%;
+  }
+  .header__text h2 {
+    font-size: 3.5rem;
+  }
+  .header__text h1 {
+    font-size: 5rem;
+  }
+  .header__text h1 span {
+    white-space: nowrap;
+  }
+  .header__text p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 772px) {
+  nav .navbar {
+    font-size: 2rem;
+  }
+  nav .navbar__logo {
+    width: 30%;
+  }
+  nav .navbar__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  nav .navbar__menu a {
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  nav .navbar__account {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+    padding: 20px;
+  }
+  nav .navbar__burger {
+    display: none;
+  }
+  nav .navbar__mobile {
+    display: none;
+  }
+  .header {
+    background-image: url("../img/header_max.jpg");
+  }
+  .header__text {
+    padding: 0;
+    padding-left: 10%;
+    width: 90%;
+  }
+  .header__text h2 {
+    font-size: 3.5rem;
+  }
+  .header__text h1 {
+    font-size: 5rem;
+  }
+  .header__text p {
+    font-size: 1.5rem;
+  }
+  .header button {
+    font-size: 3rem;
+  }
+  .about .icons:nth-child(2) {
+    left: 25%;
+  }
+  .about .icons:nth-child(3) {
+    left: 70%;
+  }
+  .about .icons:nth-child(4) {
+    left: 62%;
+  }
+  .about__block {
+    width: 70%;
+  }
+  .about__block:nth-child(even) {
+    margin-left: 25%;
+  }
+  .about__block:nth-child(odd) {
+    margin-right: 25%;
+  }
+  .faq .icons:nth-child(2) {
+    left: 74%;
+  }
+  .faq .icons:nth-child(3) {
+    left: 21%;
+  }
+  .faq .icons:nth-child(4) {
+    left: 31%;
+  }
+  .faq .about__block:nth-child(even) {
+    margin-left: 0;
+    margin-right: 25%;
+  }
+  .faq .about__block:nth-child(odd) {
+    margin-left: 25%;
+    margin-right: 0;
+  }
+  .offers__cards {
+    flex-direction: row;
+    perspective: 900px;
+  }
+  .offers .card {
+    transform: rotateY(-40deg);
+    margin: 0 10rem;
+  }
+  .offers .card:hover {
+    transform: rotateY(0);
+  }
+  .offers .card:nth-child(1) {
+    transform: rotateY(40deg);
+  }
+  .offers .card:nth-child(1):hover {
+    transform: rotateY(0deg);
+  }
+}
+@media (min-width: 992px) {
+  .header__text {
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */
