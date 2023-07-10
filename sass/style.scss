@@ -49,7 +49,7 @@ body {
 		padding: 50px;
 		text-align: center;
 		font-weight: 400;
-		font-size: 7rem;
+		font-size: 5rem;
 		font-family: 'Open Sans', sans-serif;
 		cursor: default;
 	}
@@ -519,7 +519,7 @@ nav {
 	flex-direction: row;
 	background-image: linear-gradient(
 			45deg,
-			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.8),
 			rgba(0, 0, 0, 0.1)
 		),
 		url('../img/cards.png');
@@ -527,7 +527,7 @@ nav {
 	background-size: cover;
 	background-repeat: no-repeat;
 	box-shadow: 0 0 20px $dark;
-	color: $white;
+	color: #ffffff;
 
 	&__cards {
 		display: flex;
@@ -545,7 +545,7 @@ nav {
 		min-width: 300px;
 		max-width: 350px;
 		margin: 4rem;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: rgba(0, 0, 0, 0.1);
 		border-radius: 10px;
 		box-shadow: 0 0 20px $dark;
 		transition: transform 0.3s;
@@ -601,16 +601,16 @@ nav {
 				border-radius: 10px;
 				text-transform: uppercase;
 				background-color: rgb(164, 35, 18, 0.75);
-				color: $dark;
+				color: $white;
 				border: transparent;
 				font-weight: bold;
-				box-shadow: 0 0 0 $secondary;
+				box-shadow: 0 0 10px $secondary;
 				cursor: pointer;
 				transition: box-shadow 0.3s, background-color 0.2s;
 			}
 
 			button:hover {
-				box-shadow: 0 0 8px $secondarydarker;
+				box-shadow: 0 0 15px $secondarydarker;
 				background-color: $secondarydarker;
 			}
 		}

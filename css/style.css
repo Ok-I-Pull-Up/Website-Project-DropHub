@@ -88,7 +88,7 @@ body {
   padding: 50px;
   text-align: center;
   font-weight: 400;
-  font-size: 7rem;
+  font-size: 5rem;
   font-family: "Open Sans", sans-serif;
   cursor: default;
 }
@@ -485,12 +485,12 @@ nav .navbar__mobile a:hover {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../img/cards.png");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("../img/cards.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 0 20px #000;
-  color: #fff;
+  color: #ffffff;
 }
 .offers__cards {
   display: flex;
@@ -507,7 +507,7 @@ nav .navbar__mobile a:hover {
   min-width: 300px;
   max-width: 350px;
   margin: 4rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   box-shadow: 0 0 20px #000;
   transition: transform 0.3s;
@@ -557,15 +557,15 @@ nav .navbar__mobile a:hover {
   border-radius: 10px;
   text-transform: uppercase;
   background-color: rgba(164, 35, 18, 0.75);
-  color: #000;
+  color: #fff;
   border: transparent;
   font-weight: bold;
-  box-shadow: 0 0 0 #a42312;
+  box-shadow: 0 0 10px #a42312;
   cursor: pointer;
   transition: box-shadow 0.3s, background-color 0.2s;
 }
 .offers .card .card__footer button:hover {
-  box-shadow: 0 0 8px #72190d;
+  box-shadow: 0 0 15px #72190d;
   background-color: #72190d;
 }
 
