@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 @media (min-width: 772px) {
 	nav {
 		.navbar {
@@ -113,18 +115,6 @@
 		.about__block:nth-child(odd) {
 			margin-left: 25%;
 			margin-right: 0;
-		}
-
-		.faq__text p {
-			margin-bottom: 1em;
-		}
-
-		.faq__text .question__title {
-			font-weight: bold;
-		}
-
-		.about__block span {
-			color: skyblue;
 		}
 	}
 

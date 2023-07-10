@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'animate' as *;
 
 @keyframes rotateRight {
 	from {
@@ -43,10 +44,108 @@ body {
 	width: 100%;
 }
 
+.section {
+	&__heading {
+		padding: 50px;
+		text-align: center;
+		font-weight: 400;
+		font-size: 7rem;
+		font-family: 'Electrolize', sans-serif;
+		cursor: default;
+	}
+
+	&__cutter {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+		background-color: $primarydarker;
+		z-index: -5;
+		box-shadow: 0 0 20px $dark;
+
+		&-shadowbottom {
+			position: absolute;
+			bottom: 40px;
+			width: 100%;
+			height: 80px;
+			z-index: 10;
+			overflow: hidden;
+
+			.section__cutter-middle {
+				position: absolute;
+				bottom: 0;
+				transform: translate(-50%, 0);
+				height: 40px;
+				width: 10%;
+				background-color: $primarydarker;
+
+				&-right {
+					left: 39.5%;
+					transform: skew(-45deg);
+					box-shadow: 0 0 20px $dark;
+				}
+
+				&-left {
+					right: 39.5%;
+					transform: skew(45deg);
+					box-shadow: 0 0 20px $dark;
+				}
+
+				&-center {
+					left: 50%;
+					z-index: 10;
+				}
+			}
+		}
+
+		&-bottom {
+			bottom: 0;
+		}
+
+		&-top {
+			top: 0;
+		}
+
+		&-shadowtop {
+			position: absolute;
+			top: 40px;
+			width: 100%;
+			height: 80px;
+			z-index: 10;
+			overflow: hidden;
+
+			.section__cutter-right {
+				position: absolute;
+				top: 0;
+				right: -50px;
+				height: 40px;
+				width: 40%;
+				background-color: $primarydarker;
+				transform: skew(45deg);
+				overflow: hidden;
+				box-shadow: 0 0 20px $dark;
+			}
+
+			.section__cutter-left {
+				position: absolute;
+				top: 0;
+				left: -50px;
+				height: 40px;
+				width: 40%;
+				background-color: $primarydarker;
+				transform: skew(-45deg);
+				box-shadow: 0 0 20px $dark;
+			}
+		}
+	}
+}
+
 nav {
 	position: fixed;
 	width: 100%;
+	scale: 1.3;
+	padding-top: 2rem;
 	// background-color: #0b111a;
+	// box-shadow: 0 0 20px $dark;
 	z-index: 1000;
 
 	.navbar {
@@ -60,14 +159,12 @@ nav {
 			padding: 30px;
 
 			img {
-				height: 4rem;
-				width: 15rem;
+				display: flex;
+				justify-content: flex-start;
+				align-content: center;
+				width: 50%;
 			}
 		}
-
-		
-
-		
 
 		&__menu {
 			display: none;
@@ -273,11 +370,12 @@ nav {
 			margin-right: 20px;
 			font-size: 2.5rem;
 			color: $white;
-			transition: color 0.3s;
+			transition: font-size 0.3s, color 0.3s;
 		}
 
 		a:hover {
 			color: $whitedarker;
+			font-size: 2.42rem;
 		}
 	}
 
@@ -286,34 +384,49 @@ nav {
 		padding: 20px;
 		border-radius: 45px;
 		border: transparent;
-		box-shadow: 0 0 10px $secondary;
+		box-shadow: 0 0 14px $secondary;
 		text-transform: uppercase;
 		font-family: 'League Spartan', sans-serif;
 		font-size: 2rem;
 		font-weight: bold;
 		background-color: $secondary;
 		text-shadow: 2px 2px 3px black;
-		color: #fff;
 		cursor: pointer;
-		transition: box-shadow 0.3s, color 0.3s;
+		transition: box-shadow 0.3s;
+
+		a {
+			color: $white;
+			text-decoration: none;
+			transition: color 0.3s;
+		}
 	}
 
 	button:hover {
-		color: $whitedarker;
-		box-shadow: 0 0 0px $secondary;
-	}
-}
+		box-shadow: 0 0 5px $secondary;
 
-.section__heading {
-	padding: 50px;
-	text-align: center;
-	font-weight: 400;
-	font-size: 7rem;
-	cursor: default;
+		a {
+			color: $whitedarker;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 4rem;
+
+		a {
+			width: 2rem;
+			padding: 2rem 4rem;
+			color: $white;
+		}
+	}
 }
 
 .about {
 	position: relative;
+	padding: 4rem 0;
 
 	.icons {
 		position: absolute;
@@ -385,13 +498,26 @@ nav {
 		left: 31%;
 		rotate: 20deg;
 	}
+
+	&__text p {
+		margin-bottom: 1em;
+	}
+
+	&__text .question__title,
+	&__text span {
+		font-weight: bold;
+	}
+
+	.about__block span {
+		color: skyblue;
+	}
 }
 
 .offers {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	background-image: url('../img/cards.png');
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../img/cards.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -414,8 +540,9 @@ nav {
 		min-width: 300px;
 		max-width: 350px;
 		margin: 4rem;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.4);
 		border-radius: 10px;
+		box-shadow: 0 0 20px $dark;
 		transition: transform 0.3s;
 
 		&:hover {
@@ -468,19 +595,18 @@ nav {
 				font-size: 1.7rem;
 				border-radius: 10px;
 				text-transform: uppercase;
-				background-color: rgba(0, 0, 0, 0.4);
-				color: $whitedarker;
+				background-color: rgb(164, 35, 18, 0.75);
+				color: $dark;
 				border: transparent;
 				font-weight: bold;
-				box-shadow: 0 0 10px $dark;
+				box-shadow: 0 0 0 $secondary;
 				cursor: pointer;
-				transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
+				transition: box-shadow 0.3s, background-color 0.2s;
 			}
 
 			button:hover {
-				box-shadow: 0 0 20px $dark;
-				background-color: $dark;
-				color: $whitedarker;
+				box-shadow: 0 0 8px $secondarydarker;
+				background-color: $secondarydarker;
 			}
 		}
 	}
