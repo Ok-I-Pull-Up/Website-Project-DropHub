@@ -502,7 +502,12 @@ nav {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../img/cards.png');
+	background-image: linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.1)
+		),
+		url('../img/cards.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -615,7 +620,13 @@ nav {
 
 		button {
 			width: 50%;
-			background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+			background: linear-gradient(
+					90deg,
+					$thirddarker,
+					transparent,
+					$thirddarker
+				)
+				$third;
 			opacity: 0.8;
 			padding: 1rem;
 			border-radius: 8px;
@@ -637,7 +648,8 @@ nav {
 	}
 
 	&__inputs {
-		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker)
+			$third;
 		border-radius: 8px;
 		padding: 1rem;
 		border: none;
@@ -677,6 +689,46 @@ nav {
 	&__headings {
 		display: flex;
 		justify-content: space-between;
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.4)
+		),
+		url('../img/footer-desktop.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 15px black;
+	border-top: 1px solid $white;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 6rem;
+
+		img {
+			width: 20%;
+			margin-bottom: 15px;
+		}
+
+		.footer__middle-text {
+			font-size: 2.5rem;
+			margin-bottom: 30px;
+		}
+
+		.footer__text-bottom {
+			font-size: 1.9rem;
+		}
 	}
 }
 
