@@ -1,5 +1,4 @@
 @use 'colors' as *;
-@use 'animate' as *;
 
 @keyframes rotateRight {
 	from {
@@ -595,6 +594,89 @@ nav {
 				background-color: $secondarydarker;
 			}
 		}
+	}
+}
+
+.contact {
+	position: relative;
+	padding: 4rem 0 14rem;
+
+	form {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+
+		textarea {
+			min-height: 2em;
+			height: 20rem;
+			min-width: 100%;
+			max-width: 100%;
+		}
+
+		button {
+			width: 50%;
+			background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+			opacity: 0.8;
+			padding: 1rem;
+			border-radius: 8px;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			cursor: pointer;
+			border: none;
+			color: $primary;
+			transition: color 0.3s, box-shadow 0.2s, background-color 0.3s;
+			place-content: center;
+		}
+
+		button:hover,
+		button:focus {
+			background-color: $thirddarker;
+			box-shadow: 0 0 10px $thirddarker;
+			outline: none;
+		}
+	}
+
+	&__inputs {
+		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+		border-radius: 8px;
+		padding: 1rem;
+		border: none;
+		font-size: 2.5rem;
+		transition: box-shadow 0.2s, background-color 0.3s;
+	}
+
+	&__inputs::placeholder {
+		color: $primary;
+	}
+
+	&__inputs:focus {
+		background-color: $thirddarker;
+		box-shadow: 0 0 10px $thirddarker;
+		outline: none;
+	}
+
+	&__error {
+		font-size: 2.5rem;
+		color: $third;
+	}
+
+	&__element {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 1rem;
+		width: 100%;
+
+		&-button {
+			display: flex;
+			justify-content: flex-end;
+			padding: 1rem;
+		}
+	}
+
+	&__headings {
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
