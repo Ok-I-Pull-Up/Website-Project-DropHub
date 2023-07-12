@@ -66,21 +66,21 @@ body {
   bottom: 0;
   transform: translate(-50%, 0);
   height: 40px;
-  width: 10%;
+  width: 30%;
   background-color: #09121b;
 }
 .section__cutter-shadowbottom .section__cutter-middle-right {
-  left: 39.5%;
+  left: 19%;
   transform: skew(-45deg);
   box-shadow: 0 0 20px #000;
 }
 .section__cutter-shadowbottom .section__cutter-middle-left {
-  right: 39.5%;
+  right: 19%;
   transform: skew(45deg);
   box-shadow: 0 0 20px #000;
 }
 .section__cutter-shadowbottom .section__cutter-middle-center {
-  left: 50%;
+  left: 40%;
   z-index: 10;
 }
 .section__cutter-bottom {
@@ -102,7 +102,7 @@ body {
   top: 0;
   right: -50px;
   height: 40px;
-  width: 40%;
+  width: 30%;
   background-color: #09121b;
   transform: skew(45deg);
   overflow: hidden;
@@ -113,7 +113,7 @@ body {
   top: 0;
   left: -50px;
   height: 40px;
-  width: 40%;
+  width: 30%;
   background-color: #09121b;
   transform: skew(-45deg);
   box-shadow: 0 0 20px #000;
@@ -122,25 +122,29 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  scale: 1.3;
   padding-top: 2rem;
   z-index: 1000;
 }
 nav .navbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   font-size: 3rem;
 }
 nav .navbar__logo {
   display: flex;
   justify-content: flex-start;
   width: 50%;
-  padding: 30px;
+  padding: 3rem;
 }
-nav .navbar__logo img {
+nav .navbar__logo a {
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  width: 50%;
+}
+nav .navbar__logo img {
+  width: 100%;
 }
 nav .navbar__menu {
   display: none;
@@ -246,13 +250,13 @@ nav .navbar__mobile-close {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   font-size: 5rem;
   cursor: pointer;
 }
 nav .navbar__mobile a {
   position: relative;
-  padding: 20px;
+  padding: 2rem;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 3rem;
@@ -291,16 +295,20 @@ nav .navbar__mobile a:hover {
   box-shadow: 0 0 20px #000;
 }
 .header__text {
-  padding: 30px;
+  margin-top: 12rem;
+  padding: 3rem;
   cursor: default;
 }
 .header__text h2 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .header__text h1 {
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 3rem;
+}
+.header__text h1 span {
+  white-space: nowrap;
 }
 .header__text-bold {
   font-weight: bold;
@@ -322,8 +330,8 @@ nav .navbar__mobile a:hover {
   font-size: 2.42rem;
 }
 .header button {
-  margin: 50px 0;
-  padding: 20px;
+  margin: 3rem 0;
+  padding: 2rem;
   border-radius: 45px;
   border: transparent;
   box-shadow: 0 0 14px #a42312;
@@ -473,7 +481,7 @@ nav .navbar__mobile a:hover {
   font-size: 1.4rem;
   margin-bottom: 5px;
   padding: 0 1.4em;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
 }
 .offers .card__body ul li {
@@ -518,10 +526,10 @@ nav .navbar__mobile a:hover {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  padding: 1rem;
 }
 .contact form textarea {
-  min-height: 2em;
-  height: 20rem;
+  min-height: 20rem;
   min-width: 100%;
   max-width: 100%;
 }
@@ -582,7 +590,11 @@ nav .navbar__mobile a:hover {
 }
 .contact__headings {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact__heading {
+  width: 100%;
 }
 
 .footer {
@@ -590,12 +602,11 @@ nav .navbar__mobile a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../img/footer-desktop.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/footer-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 15px black;
-  border-top: 1px solid #fff;
 }
 .footer__box {
   display: flex;
@@ -603,43 +614,127 @@ nav .navbar__mobile a:hover {
   justify-content: center;
   align-items: center;
   padding: 6rem;
+  text-align: center;
+}
+.footer__box a {
+  padding-top: 2rem;
+  width: 50%;
 }
 .footer__box img {
-  width: 20%;
-  margin-bottom: 15px;
+  width: 80%;
+  margin-bottom: 1.5rem;
 }
 .footer__box .footer__middle-text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
 .footer__box .footer__text-bottom {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 576px) {
+  nav .navbar__logo img {
+    width: 50%;
+  }
   .header__text {
     padding-right: 5%;
     padding-left: 10%;
   }
-  .header__text h2 {
-    font-size: 3.5rem;
-  }
-  .header__text h1 {
-    font-size: 5rem;
-  }
-  .header__text h1 span {
-    white-space: nowrap;
-  }
-  .header__text p {
-    font-size: 1.5rem;
+  .contact__headings {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media (min-width: 772px) {
+  .section__heading {
+    padding: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 5rem;
+    font-family: "Open Sans", sans-serif;
+    cursor: default;
+  }
+  .section__cutter {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    background-color: #09121b;
+    z-index: -5;
+    box-shadow: 0 0 20px #000;
+  }
+  .section__cutter-shadowbottom {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .section__cutter-shadowbottom .section__cutter-middle {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    height: 40px;
+    width: 10%;
+    background-color: #09121b;
+  }
+  .section__cutter-shadowbottom .section__cutter-middle-right {
+    left: 39.5%;
+    transform: skew(-45deg);
+    box-shadow: 0 0 20px #000;
+  }
+  .section__cutter-shadowbottom .section__cutter-middle-left {
+    right: 39.5%;
+    transform: skew(45deg);
+    box-shadow: 0 0 20px #000;
+  }
+  .section__cutter-shadowbottom .section__cutter-middle-center {
+    left: 50%;
+    z-index: 10;
+  }
+  .section__cutter-bottom {
+    bottom: 0;
+  }
+  .section__cutter-top {
+    top: 0;
+  }
+  .section__cutter-shadowtop {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .section__cutter-shadowtop .section__cutter-right {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    height: 40px;
+    width: 40%;
+    background-color: #09121b;
+    transform: skew(45deg);
+    overflow: hidden;
+    box-shadow: 0 0 20px #000;
+  }
+  .section__cutter-shadowtop .section__cutter-left {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 40px;
+    width: 40%;
+    background-color: #09121b;
+    transform: skew(-45deg);
+    box-shadow: 0 0 20px #000;
+  }
   nav .navbar {
     font-size: 2rem;
   }
   nav .navbar__logo {
     width: 30%;
+  }
+  nav .navbar__logo img {
+    width: 50%;
   }
   nav .navbar__menu {
     display: flex;
@@ -686,7 +781,7 @@ nav .navbar__mobile a:hover {
   }
   .header button {
     font-size: 2.5rem;
-    padding: 15px;
+    padding: 1.5rem;
   }
   .about .icons:nth-child(2) {
     left: 25%;
@@ -715,13 +810,14 @@ nav .navbar__mobile a:hover {
   .faq .icons:nth-child(4) {
     left: 31%;
   }
+  .faq .about__block {
+    margin: 5%;
+  }
   .faq .about__block:nth-child(even) {
-    margin-left: 0;
     margin-right: 25%;
   }
   .faq .about__block:nth-child(odd) {
     margin-left: 25%;
-    margin-right: 0;
   }
   .offers__cards {
     flex-direction: row;
@@ -729,7 +825,7 @@ nav .navbar__mobile a:hover {
   }
   .offers .card {
     transform: rotateY(-40deg);
-    margin: 0 10rem;
+    margin: 0 4rem;
   }
   .offers .card:hover {
     transform: rotateY(0);
@@ -740,9 +836,28 @@ nav .navbar__mobile a:hover {
   .offers .card:nth-child(1):hover {
     transform: rotateY(0deg);
   }
+  .footer__box a {
+    width: 50%;
+  }
+  .footer__box img {
+    width: 70%;
+  }
+  .footer__box .footer__middle-text {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .footer__box .footer__text-bottom {
+    font-size: 1.9rem;
+  }
 }
 @media (min-width: 992px) {
   .header__text {
     width: 70%;
+  }
+  .footer__box a {
+    width: 50%;
+  }
+  .footer__box img {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
