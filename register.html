@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-page</title>
+    <title>register-page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,41 +16,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
 </head>
 
 <body>
     <main>
 
-        <section class="login">
+        <section class="register">
 
             <div class="wrapper">
-                <div class="login__form">
+                <div class="register__form">
                     <form class="form-contact" action="">
                         <div class="box-circle"><i class="fa-solid fa-user"></i></div>
-                        <h2 class="login__title">Sign in</h2>
+                        <h2 class="register__title">Sign up</h2>
 
-                        <div class="login__input--username">
+                        <div class="register__input--username">
                             <i class="fa-solid fa-user"></i>
                             <input class="input-form" type="text" placeholder="Username">
-                            <p class="login__error--username">Error:</p>
+                            <p class="register__error--username">Error:</p>
                         </div>
 
 
-                        <div class="login__input--password">
+                        <div class="register__input--password">
                             <i class="fa-solid fa-lock"></i>
                             <input class="input-form" type="password" placeholder="Password">
-                            <p class="login__error--password">Error:</p>
+                            <p class="register__error--password">Error:</p>
+                        </div>
+
+                        <div class="register__input--passwordrepeat">
+                            <i class="fa-solid fa-lock"></i>
+                            <input class="input-form" type="password" placeholder="Repeat password">
+                            <p class="register__error--password">Error:</p>
                         </div>
 
                         <div class="box-helper-elements">
-                            <label class="login__label--text"><input class="login__checkbox" type="checkbox">
-                                Remember me</label>
-
-                            <a class="login__a--passwordrecovery" href="">Forgot password?</a>
+                            <label class="register__label--text"><input class="register__checkbox" type="checkbox">
+                                By signing up you agree to our <span class="tos__link">Terms & Conditions</span></label>
                         </div>
-                        <button type="submit" class="Login__btn">Login</button>
-                        <p class="login__a--register" href="">Don't have an account? <a class="register__link" href="register.html">Sign up</a>
+                        <button type="submit" class="register__btn">register</button>
+                        <span class="btn__loginnow">Already have an account? <a class="login__link" href="login.html">Login</a></span>
                     </form>
                 </div>
             </div>

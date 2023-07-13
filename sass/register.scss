@@ -21,7 +21,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-.login {
+.register {
 	height: 100vh; //temporary
 	display: flex;
 	justify-content: center;
@@ -78,7 +78,7 @@ html {
 		}
 	}
 
-	.login__title {
+	.register__title {
 		text-align: center;
 		margin-bottom: 3.2rem;
 		color: #fff;
@@ -97,30 +97,33 @@ html {
 		}
 	}
 
-	.login__error--username,
-	.login__error--password {
+	.register__error--username,
+	.register__error--password {
 		display: none;
 	}
 
 	.box-helper-elements {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		width: 100%;
 		margin-bottom: 3.2rem;
 
-		.login__checkbox {
+		.register__checkbox {
 			margin: 0;
+		}
+
+		.tos__link {
+			color: skyblue;
+		}
+
+		.register__label--text,
+		.register__a--register {
+			color: $white;
 		}
 	}
 
-	.login__label--text,
-	.login__a--passwordrecovery,
-	.login__a--register {
-		color: $white;
-	}
-
-	.Login__btn {
+	.register__btn {
 		margin-bottom: 3.2rem;
 		background: transparent;
 		border: 1px solid #ffffff9a;
@@ -130,15 +133,21 @@ html {
 		cursor: pointer;
 	}
 
-	.login__input--username {
+	.register__input--username {
 		margin-bottom: 2rem;
 	}
 
-	.login__input--password {
+	.register__input--password {
+		margin-bottom: 2rem;
+	}
+
+	.register__input--passwordrepeat {
 		margin-bottom: 10px;
 	}
-	.login__input--password,
-	.login__input--username {
+
+	.register__input--password,
+	.register__input--username,
+	.register__input--passwordrepeat {
 		display: flex;
 		width: 100%;
 		padding: 0.1rem;
@@ -149,7 +158,13 @@ html {
 		}
 	}
 
-	.register__link {
+	.btn__loginnow {
+		color: $white;
+	}
+
+	.login__link {
 		color: skyblue;
 	}
 }
+
+//2 checkboxy - mam 18 lat, zgoda na przetwarzanie danych

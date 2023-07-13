@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.login {
+.register {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.login__form {
+.register__form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ html {
   font-size: 4rem;
   color: #fff;
 }
-.form-contact .login__title {
+.form-contact .register__title {
   text-align: center;
   margin-bottom: 3.2rem;
   color: #fff;
@@ -87,26 +87,28 @@ html {
 .form-contact .input-form:focus {
   outline: none;
 }
-.form-contact .login__error--username,
-.form-contact .login__error--password {
+.form-contact .register__error--username,
+.form-contact .register__error--password {
   display: none;
 }
 .form-contact .box-helper-elements {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 3.2rem;
 }
-.form-contact .box-helper-elements .login__checkbox {
+.form-contact .box-helper-elements .register__checkbox {
   margin: 0;
 }
-.form-contact .login__label--text,
-.form-contact .login__a--passwordrecovery,
-.form-contact .login__a--register {
+.form-contact .box-helper-elements .tos__link {
+  color: skyblue;
+}
+.form-contact .box-helper-elements .register__label--text,
+.form-contact .box-helper-elements .register__a--register {
   color: #fff;
 }
-.form-contact .Login__btn {
+.form-contact .register__btn {
   margin-bottom: 3.2rem;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6039215686);
@@ -115,23 +117,31 @@ html {
   padding: 10px 30px;
   cursor: pointer;
 }
-.form-contact .login__input--username {
+.form-contact .register__input--username {
   margin-bottom: 2rem;
 }
-.form-contact .login__input--password {
+.form-contact .register__input--password {
+  margin-bottom: 2rem;
+}
+.form-contact .register__input--passwordrepeat {
   margin-bottom: 10px;
 }
-.form-contact .login__input--password,
-.form-contact .login__input--username {
+.form-contact .register__input--password,
+.form-contact .register__input--username,
+.form-contact .register__input--passwordrepeat {
   display: flex;
   width: 100%;
   padding: 0.1rem;
   border-bottom: 1px solid #fff;
 }
-.form-contact .login__input--password .fa-solid,
-.form-contact .login__input--username .fa-solid {
+.form-contact .register__input--password .fa-solid,
+.form-contact .register__input--username .fa-solid,
+.form-contact .register__input--passwordrepeat .fa-solid {
   color: white;
 }
-.form-contact .register__link {
+.form-contact .btn__loginnow {
+  color: #fff;
+}
+.form-contact .login__link {
   color: skyblue;
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=register.css.map */
