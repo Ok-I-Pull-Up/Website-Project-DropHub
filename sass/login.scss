@@ -1,21 +1,39 @@
+@use './colors' as *;
+
 a {
 	color: black;
 	text-decoration: none;
 }
 
+::placeholder {
+	color: rgb(255, 255, 255, 0.5);
+	font-style: italic;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	// font-size: 62.5%;
+	scroll-behavior: smooth;
+}
 
 .login {
+	height: 100vh; //temporary
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Open Sans', sans-serif;
-	background: rgb(119, 163, 230);
-	background: linear-gradient(
-		180deg,
-		rgba(119, 163, 230, 1) 0%,
-		rgba(99, 142, 208, 1) 11%,
-		rgba(92, 136, 203, 1) 47%,
-		rgba(55, 98, 215, 1) 83%
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(13, 27, 39);
+	background: radial-gradient(
+		circle,
+		rgba(13, 27, 39, 1) 0%,
+		rgba(13, 14, 39, 1) 39%,
+		rgba(11, 10, 29, 1) 71%,
+		rgba(9, 18, 27, 1) 100%
 	);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -29,7 +47,6 @@ a {
 	}
 }
 
-
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -41,23 +58,22 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 40rem;
-	border: 1px solid rgb(19, 16, 16);
+	width: 35rem;
+	border: 1px solid #fff;
 	border-radius: 2px;
-	padding: 10px 20px;
+	padding: 3rem 6.4rem;
 
 	.box-circle {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 8rem;
-		height: 8rem;
-		border: 1px solid rgb(26, 21, 21);
+		width: 7rem;
+		height: 7rem;
+		border: 1px solid #fff;
 		border-radius: 50%;
-		margin-bottom: 3.2rem;
 
 		.fa-user {
-			font-size: 40px;
+			font-size: 4rem;
 			color: $white;
 		}
 	}
@@ -65,13 +81,16 @@ a {
 	.login__title {
 		text-align: center;
 		margin-bottom: 3.2rem;
+		color: #fff;
+		padding-top: 20px;
 	}
 
 	.input-form {
-		width: 70%;
+		width: 100%;
 		border: 0;
-		border-bottom: 1px solid black;
-		margin-bottom: 3.2rem;
+		background: transparent;
+		padding: 2px 0.5rem;
+		color: $white;
 
 		&:focus {
 			outline: none;
@@ -79,7 +98,7 @@ a {
 	}
 
 	.login__error--username,
-	.login__error-password {
+	.login__error--password {
 		display: none;
 	}
 
@@ -87,12 +106,47 @@ a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 70%;
+		width: 100%;
 		margin-bottom: 3.2rem;
+
+		.login__checkbox {
+			margin: 0;
+		}
+	}
+
+	.login__label--text,
+	.login__a--passwordrecovery,
+	.login__a--register {
+		color: $white;
 	}
 
 	.Login__btn {
 		margin-bottom: 3.2rem;
+		background: transparent;
+		border: 1px solid #ffffff9a;
+		color: $white;
+		border-radius: 2px;
+		padding: 10px 30px;
+		cursor: pointer;
+	}
+
+	.login__input--username {
+		margin-bottom: 2rem;
+	}
+
+	.login__input--password {
+		margin-bottom: 10px;
+	}
+	.login__input--password,
+	.login__input--username {
+		display: flex;
+		width: 100%;
+		padding: 0.1rem;
+		border-bottom: 1px solid #fff;
+
+		.fa-solid {
+			color: white;
+		}
 	}
 }
 
