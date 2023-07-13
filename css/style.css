@@ -197,8 +197,8 @@ nav .navbar__account a {
   text-decoration: none;
   color: #fff;
 }
-nav .navbar__account p::after,
-nav .navbar__account p::before {
+nav .navbar__account a::after,
+nav .navbar__account a::before {
   content: "";
   position: absolute;
   bottom: 0.1em;
@@ -208,22 +208,22 @@ nav .navbar__account p::before {
   transform: scaleX(0);
   transition: transform 0.5s;
 }
-nav .navbar__account p::after {
+nav .navbar__account a::after {
   left: 50%;
   transform-origin: left;
 }
-nav .navbar__account p::before {
+nav .navbar__account a::before {
   right: 50%;
   transform-origin: right;
 }
-nav .navbar__account p:hover::after,
-nav .navbar__account p:hover::before {
+nav .navbar__account a:hover::after,
+nav .navbar__account a:hover::before {
   transform: scaleX(0.5);
 }
-nav .navbar__account p:hover::after {
+nav .navbar__account a:hover::after {
   transform-origin: left;
 }
-nav .navbar__account p:hover::before {
+nav .navbar__account a:hover::before {
   transform-origin: right;
 }
 nav .navbar__burger {

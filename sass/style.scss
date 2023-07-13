@@ -228,8 +228,8 @@ nav {
 				color: $white;
 			}
 
-			p::after,
-			p::before {
+			a::after,
+			a::before {
 				content: '';
 				position: absolute;
 				bottom: 0.1em;
@@ -240,26 +240,26 @@ nav {
 				transition: transform 0.5s;
 			}
 
-			p::after {
+			a::after {
 				left: 50%;
 				transform-origin: left;
 			}
 
-			p::before {
+			a::before {
 				right: 50%;
 				transform-origin: right;
 			}
 
-			p:hover::after,
-			p:hover::before {
+			a:hover::after,
+			a:hover::before {
 				transform: scaleX(0.5);
 			}
 
-			p:hover::after {
+			a:hover::after {
 				transform-origin: left;
 			}
 
-			p:hover::before {
+			a:hover::before {
 				transform-origin: right;
 			}
 		}
