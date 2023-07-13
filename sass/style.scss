@@ -219,11 +219,13 @@ nav {
 		&__account {
 			display: none;
 
-			p {
+			a {
 				position: relative;
 				padding: 10px;
 				text-transform: uppercase;
 				cursor: pointer;
+				text-decoration: none;
+				color: $white;
 			}
 
 			p::after,

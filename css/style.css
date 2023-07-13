@@ -189,11 +189,13 @@ nav .navbar__menu a:hover::before {
 nav .navbar__account {
   display: none;
 }
-nav .navbar__account p {
+nav .navbar__account a {
   position: relative;
   padding: 10px;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 nav .navbar__account p::after,
 nav .navbar__account p::before {
