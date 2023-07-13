@@ -2,6 +2,8 @@
 
 @media (min-width: 772px) {
 	.section {
+		scroll-margin-top: 94px;
+
 		&__heading {
 			padding: 50px;
 			text-align: center;
@@ -120,6 +122,19 @@
 					text-decoration: none;
 					text-transform: uppercase;
 					color: #fff;
+				}
+
+				.active::after,
+				.active::before {
+					transform: scaleX(0.4);
+				}
+
+				.active::after {
+					transform-origin: left;
+				}
+
+				.active::before {
+					transform-origin: right;
 				}
 			}
 
@@ -254,12 +269,12 @@
 				width: 70%;
 			}
 
-			.footer__middle-text {
+			.footer__middle {
 				font-size: 2.5rem;
 				margin-bottom: 3rem;
 			}
 
-			.footer__text-bottom {
+			.footer__copyright {
 				font-size: 1.9rem;
 			}
 		}
