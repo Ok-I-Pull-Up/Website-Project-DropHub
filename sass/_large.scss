@@ -6,4 +6,16 @@
 			width: 70%;
 		}
 	}
+
+	.footer {
+		&__box {
+			a {
+				width: 50%;
+			}
+
+			img {
+				width: 50%;
+			}
+		}
+	}
 }

@@ -74,23 +74,23 @@ body {
 				bottom: 0;
 				transform: translate(-50%, 0);
 				height: 40px;
-				width: 10%;
+				width: 30%;
 				background-color: $primarydarker;
 
 				&-right {
-					left: 39.5%;
+					left: 19%;
 					transform: skew(-45deg);
 					box-shadow: 0 0 20px $dark;
 				}
 
 				&-left {
-					right: 39.5%;
+					right: 19%;
 					transform: skew(45deg);
 					box-shadow: 0 0 20px $dark;
 				}
 
 				&-center {
-					left: 50%;
+					left: 40%;
 					z-index: 10;
 				}
 			}
@@ -117,7 +117,7 @@ body {
 				top: 0;
 				right: -50px;
 				height: 40px;
-				width: 40%;
+				width: 30%;
 				background-color: $primarydarker;
 				transform: skew(45deg);
 				overflow: hidden;
@@ -129,7 +129,7 @@ body {
 				top: 0;
 				left: -50px;
 				height: 40px;
-				width: 40%;
+				width: 30%;
 				background-color: $primarydarker;
 				transform: skew(-45deg);
 				box-shadow: 0 0 20px $dark;
@@ -141,7 +141,7 @@ body {
 nav {
 	position: fixed;
 	width: 100%;
-	scale: 1.3;
+	// scale: 1.3;
 	padding-top: 2rem;
 	// background-color: #0b111a;
 	// box-shadow: 0 0 20px $dark;
@@ -149,19 +149,25 @@ nav {
 
 	.navbar {
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 		font-size: 3rem;
 
 		&__logo {
 			display: flex;
 			justify-content: flex-start;
 			width: 50%;
-			padding: 30px;
+			padding: 3rem;
 
-			img {
+			a {
 				display: flex;
 				justify-content: flex-start;
 				align-content: center;
-				width: 50%;
+			}
+
+			img {
+				width: 100%;
 			}
 		}
 
@@ -288,14 +294,14 @@ nav {
 				position: absolute;
 				top: 0;
 				right: 0;
-				padding: 10px 20px;
+				padding: 1rem 2rem;
 				font-size: 5rem;
 				cursor: pointer;
 			}
 
 			a {
 				position: relative;
-				padding: 20px;
+				padding: 2rem;
 				text-decoration: none;
 				text-transform: uppercase;
 				font-size: 3rem;
@@ -340,17 +346,22 @@ nav {
 	box-shadow: 0 0 20px $dark;
 
 	&__text {
-		padding: 30px;
+		margin-top: 12rem;
+		padding: 3rem;
 		cursor: default;
 
 		h2 {
 			text-transform: uppercase;
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 
 		h1 {
 			text-transform: uppercase;
-			font-size: 4.5rem;
+			font-size: 3rem;
+
+			span {
+				white-space: nowrap;
+			}
 		}
 
 		&-bold {
@@ -379,8 +390,8 @@ nav {
 	}
 
 	button {
-		margin: 50px 0;
-		padding: 20px;
+		margin: 3rem 0;
+		padding: 2rem;
 		border-radius: 45px;
 		border: transparent;
 		box-shadow: 0 0 14px $secondary;
@@ -502,12 +513,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	background-image: linear-gradient(
-			45deg,
-			rgba(0, 0, 0, 0.8),
-			rgba(0, 0, 0, 0.1)
-		),
-		url('../img/cards.png');
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../img/cards.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -557,7 +563,7 @@ nav {
 				font-size: 1.4rem;
 				margin-bottom: 5px;
 				padding: 0 1.4em;
-				text-align: center;
+				text-align: left;
 				margin-top: 20px;
 
 				li {
@@ -610,23 +616,17 @@ nav {
 		display: flex;
 		justify-content: space-around;
 		flex-direction: column;
+		padding: 1rem;
 
 		textarea {
-			min-height: 2em;
-			height: 20rem;
+			min-height: 20rem;
 			min-width: 100%;
 			max-width: 100%;
 		}
 
 		button {
 			width: 50%;
-			background: linear-gradient(
-					90deg,
-					$thirddarker,
-					transparent,
-					$thirddarker
-				)
-				$third;
+			background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
 			opacity: 0.8;
 			padding: 1rem;
 			border-radius: 8px;
@@ -648,8 +648,7 @@ nav {
 	}
 
 	&__inputs {
-		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker)
-			$third;
+		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
 		border-radius: 8px;
 		padding: 1rem;
 		border: none;
@@ -688,7 +687,12 @@ nav {
 
 	&__headings {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__heading {
+		width: 100%;
 	}
 }
 
@@ -697,17 +701,11 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-image: linear-gradient(
-			45deg,
-			rgba(0, 0, 0, 0.8),
-			rgba(0, 0, 0, 0.4)
-		),
-		url('../img/footer-desktop.jpg');
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../img/footer-desktop.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 0 15px black;
-	border-top: 1px solid $white;
 
 	&__box {
 		display: flex;
@@ -715,19 +713,25 @@ nav {
 		justify-content: center;
 		align-items: center;
 		padding: 6rem;
+		text-align: center;
+
+		a {
+			padding-top: 2rem;
+			width: 50%;
+		}
 
 		img {
-			width: 20%;
-			margin-bottom: 15px;
+			width: 80%;
+			margin-bottom: 1.5rem;
 		}
 
 		.footer__middle-text {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			margin-bottom: 30px;
 		}
 
 		.footer__text-bottom {
-			font-size: 1.9rem;
+			font-size: 1.4rem;
 		}
 	}
 }

@@ -1,25 +1,27 @@
 @use 'colors' as *;
 
 @media (min-width: 576px) {
+	nav {
+		.navbar {
+			&__logo {
+				img {
+					width: 50%;
+				}
+			}
+		}
+	}
+
 	.header {
 		&__text {
 			padding-right: 5%;
 			padding-left: 10%;
+		}
+	}
 
-			h2 {
-				font-size: 3.5rem;
-			}
-
-			h1 {
-				font-size: 5rem;
-				span {
-					white-space: nowrap;
-				}
-			}
-
-			p {
-				font-size: 1.5rem;
-			}
+	.contact {
+		&__headings {
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 }
