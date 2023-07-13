@@ -37,6 +37,9 @@ body {
   width: 100%;
 }
 
+.section {
+  scroll-margin-top: 87px;
+}
 .section__heading {
   padding: 50px;
   text-align: center;
@@ -123,6 +126,7 @@ nav {
   position: fixed;
   width: 100%;
   padding-top: 2rem;
+  transition: background-color 0.3s, box-shadow 0.3s, padding-top 0.3s;
   z-index: 1000;
 }
 nav .navbar {
@@ -131,6 +135,7 @@ nav .navbar {
   align-items: center;
   width: 100%;
   font-size: 3rem;
+  transition: scale 0.3s;
 }
 nav .navbar__logo {
   display: flex;
@@ -250,7 +255,7 @@ nav .navbar__mobile-close {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   font-size: 5rem;
   cursor: pointer;
 }
@@ -280,6 +285,16 @@ nav .navbar__mobile a:hover::after {
 }
 nav .navbar__mobile a:hover {
   color: #fff;
+}
+
+.nav__scroll {
+  background-color: #0b111a;
+  box-shadow: 0 0 20px #000;
+  padding-top: 0;
+}
+
+.navbar__scroll {
+  scale: 0.8;
 }
 
 .header {
@@ -624,11 +639,11 @@ nav .navbar__mobile a:hover {
   width: 80%;
   margin-bottom: 1.5rem;
 }
-.footer__box .footer__middle-text {
+.footer__box .footer__middle {
   font-size: 2rem;
   margin-bottom: 30px;
 }
-.footer__box .footer__text-bottom {
+.footer__box .footer__copyright {
   font-size: 1.4rem;
 }
 
@@ -646,6 +661,9 @@ nav .navbar__mobile a:hover {
   }
 }
 @media (min-width: 772px) {
+  .section {
+    scroll-margin-top: 94px;
+  }
   .section__heading {
     padding: 50px;
     text-align: center;
@@ -749,6 +767,16 @@ nav .navbar__mobile a:hover {
     text-transform: uppercase;
     color: #fff;
   }
+  nav .navbar__menu .active::after,
+  nav .navbar__menu .active::before {
+    transform: scaleX(0.4);
+  }
+  nav .navbar__menu .active::after {
+    transform-origin: left;
+  }
+  nav .navbar__menu .active::before {
+    transform-origin: right;
+  }
   nav .navbar__account {
     display: flex;
     justify-content: flex-end;
@@ -842,11 +870,11 @@ nav .navbar__mobile a:hover {
   .footer__box img {
     width: 70%;
   }
-  .footer__box .footer__middle-text {
+  .footer__box .footer__middle {
     font-size: 2.5rem;
     margin-bottom: 3rem;
   }
-  .footer__box .footer__text-bottom {
+  .footer__box .footer__copyright {
     font-size: 1.9rem;
   }
 }

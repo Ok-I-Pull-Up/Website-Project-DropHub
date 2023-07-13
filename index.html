@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 
-	<body>
+	<body class="main-page">
 		<nav>
 			<div class="wrapper">
 				<div class="navbar">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 
-			<div class="navbar__mobile">
+			<div class="navbar__mobile navbar__mobile--active">
 				<div class="navbar__mobile-close">
 					<i class="fa-solid fa-xmark"></i>
 				</div>
@@ -51,7 +51,7 @@
 			</div>
 		</nav>
 
-		<header class="header" id="home">
+		<header class="header section" id="home">
 			<div class="wrapper">
 				<div class="header__text">
 					<h2>introduction</h2>
@@ -78,7 +78,7 @@
 		</header>
 
 		<main>
-			<section class="about" id="about">
+			<section class="about section" id="about">
 				<div class="section__cutters">
 					<div class="section__cutter section__cutter-top"></div>
 					<div class="section__cutter-shadowtop">
@@ -120,7 +120,7 @@
 				</div>
 			</section>
 
-			<section class="faq about" id="faq">
+			<section class="faq about section" id="faq">
 				<div class="wrapper">
 					<h2 class="section__heading">FAQ</h2>
 
@@ -190,7 +190,7 @@
 				</div>
 			</section>
 
-			<section class="offers" id="packages">
+			<section class="offers section" id="packages">
 				<div class="wrapper">
 					<h2 class="section__heading">PACKAGES</h2>
 
@@ -237,7 +237,7 @@
 				</div>
 			</section>
 
-			<section class="contact" id="contact">
+			<section class="contact section" id="contact">
 				<div class="section__cutters">
 					<div class="section__cutter section__cutter-top"></div>
 					<div class="section__cutter-shadowtop">
@@ -289,11 +289,13 @@
 				<div class="footer__box">
 					<a href="index.html#home"><img src="./img/logo.png" alt="DropHub-Logo" /></a>
 
-					<p class="footer__middle-text">Join US.</p>
+					<p class="footer__middle">Join US.</p>
 
-					<p class="footer__text-bottom">&copy; <span class="">2023</span> DropHub Inc. All rights Reserved</p>
+					<p class="footer__copyright">&copy; <span class="footer__copyright-year"></span> DropHub Inc. All rights Reserved</p>
 				</div>
 			</div>
 		</footer>
+
+		<script src="./js/main.js"></script>
 	</body>
 </html>
