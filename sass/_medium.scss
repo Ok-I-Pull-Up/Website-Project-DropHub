@@ -1,6 +1,30 @@
 @use 'colors' as *;
 
 @media (min-width: 772px) {
+	@keyframes cardSlide-left {
+		0% {
+			opacity: 0;
+			transform: translate(20%, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(-50%, 40deg);
+		}
+	}
+
+	@keyframes cardSlide-right {
+		0% {
+			opacity: 0;
+			transform: translate(-20%, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(50%, -40deg);
+		}
+	}
+
 	.section {
 		scroll-margin-top: 94px;
 
@@ -95,6 +119,14 @@
 					box-shadow: 0 0 20px $dark;
 				}
 			}
+		}
+
+		&-cardAnimationSL {
+			animation: cardSlide-left 0.5s ease-out 0.2s;
+		}
+
+		&-cardAnimationRL {
+			animation: cardSlide-right 0.5s ease-out 0.2s;
 		}
 	}
 
@@ -242,6 +274,7 @@
 		}
 
 		.card {
+			opacity: 0;
 			transform: rotateY(-40deg);
 			margin: 0 4rem;
 
@@ -256,6 +289,13 @@
 
 		.card:nth-child(1):hover {
 			transform: rotateY(0deg);
+		}
+	}
+
+	.contact {
+		&__headings {
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 
