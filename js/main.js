@@ -54,11 +54,9 @@ const navChangeBgc = () => {
 	if (window.scrollY >= 80) {
 		nav.classList.add('nav__scroll');
 		navbar.classList.add('navbar__scroll');
-		console.log('add');
 	} else {
 		nav.classList.remove('nav__scroll');
 		navbar.classList.remove('navbar__scroll');
-		console.log('remove');
 	}
 };
 

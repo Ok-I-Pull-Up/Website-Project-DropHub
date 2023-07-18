@@ -14,7 +14,29 @@
     rotate: -360deg;
   }
 }
-* {
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -120,6 +142,12 @@ body {
   background-color: #09121b;
   transform: skew(-45deg);
   box-shadow: 0 0 20px #000;
+}
+.section-animationSL {
+  animation: slide-left 0.5s ease-out 0.2s forwards;
+}
+.section-animationRL {
+  animation: slide-right 0.5s ease-out 0.2s forwards;
 }
 
 nav {
@@ -417,6 +445,7 @@ nav .navbar__mobile a:hover {
   margin: 5%;
   border-radius: 20px;
   background-color: rgba(21, 44, 64, 0.6);
+  opacity: 0;
   transition: background-color 0.3s;
 }
 .about__block:hover {
@@ -576,6 +605,7 @@ nav .navbar__mobile a:hover {
   padding: 1rem;
   border: none;
   font-size: 2.5rem;
+  font-family: "Open Sans", sans-serif;
   transition: box-shadow 0.2s, background-color 0.3s;
 }
 .contact__inputs::-moz-placeholder {
@@ -589,15 +619,11 @@ nav .navbar__mobile a:hover {
   box-shadow: 0 0 10px #6398ad;
   outline: none;
 }
-.contact__error {
-  font-size: 2.5rem;
-  color: #87ceeb;
-}
 .contact__element {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
 }
 .contact__element-button {
@@ -612,6 +638,44 @@ nav .navbar__mobile a:hover {
 }
 .contact__heading {
   width: 100%;
+}
+.contact .error-text {
+  font-size: 1.5rem;
+  color: #87ceeb;
+}
+.contact .form-box .error-text {
+  font-weight: bold;
+  visibility: hidden;
+}
+.contact .form-box.error .error-text {
+  visibility: visible;
+}
+.contact .popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background: linear-gradient(90deg, #6398ad, transparent, #6398ad) #87ceeb;
+  border-radius: 8px;
+  border: 2px solid #0d1b27;
+  transition: top 0.5s;
+  z-index: 1000;
+}
+.contact .popup p {
+  font-size: 28px;
+  color: #0d1b27;
+}
+.contact .popup .close {
+  margin-top: 20px;
+}
+.contact .show-popup {
+  top: 50%;
 }
 
 .footer {
@@ -630,7 +694,7 @@ nav .navbar__mobile a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem;
   text-align: center;
 }
 .footer__box a {
@@ -640,10 +704,6 @@ nav .navbar__mobile a:hover {
 .footer__box img {
   width: 80%;
   margin-bottom: 1.5rem;
-}
-.footer__box .footer__middle {
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 .footer__box .footer__copyright {
   font-size: 1.4rem;
@@ -657,12 +717,28 @@ nav .navbar__mobile a:hover {
     padding-right: 5%;
     padding-left: 10%;
   }
-  .contact__headings {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 @media (min-width: 772px) {
+  @keyframes cardSlide-left {
+    0% {
+      opacity: 0;
+      transform: translate(20%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 40deg);
+    }
+  }
+  @keyframes cardSlide-right {
+    0% {
+      opacity: 0;
+      transform: translate(-20%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(50%, -40deg);
+    }
+  }
   .section {
     scroll-margin-top: 94px;
   }
@@ -746,6 +822,12 @@ nav .navbar__mobile a:hover {
     background-color: #09121b;
     transform: skew(-45deg);
     box-shadow: 0 0 20px #000;
+  }
+  .section-cardAnimationSL {
+    animation: cardSlide-left 0.5s ease-out 0.2s;
+  }
+  .section-cardAnimationRL {
+    animation: cardSlide-right 0.5s ease-out 0.2s;
   }
   nav .navbar {
     font-size: 2rem;
@@ -854,6 +936,7 @@ nav .navbar__mobile a:hover {
     perspective: 900px;
   }
   .offers .card {
+    opacity: 0;
     transform: rotateY(-40deg);
     margin: 0 4rem;
   }
@@ -865,6 +948,10 @@ nav .navbar__mobile a:hover {
   }
   .offers .card:nth-child(1):hover {
     transform: rotateY(0deg);
+  }
+  .contact__headings {
+    flex-direction: row;
+    justify-content: space-between;
   }
   .footer__box a {
     width: 50%;
@@ -883,6 +970,10 @@ nav .navbar__mobile a:hover {
 @media (min-width: 992px) {
   .header__text {
     width: 70%;
+  }
+  .contact .error-text {
+    font-size: 2rem;
+    color: #87ceeb;
   }
   .footer__box a {
     width: 50%;
