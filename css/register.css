@@ -41,6 +41,19 @@ html {
   align-items: center;
   padding: 4rem;
 }
+.register__back {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.register__back i {
+  color: #fff;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+.register__back i:hover {
+  color: #a42312;
+}
 
 .wrapper {
   margin: 0 auto;
@@ -116,6 +129,11 @@ html {
   border-radius: 2px;
   padding: 10px 30px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.form-contact .register__btn:hover {
+  background-color: #fff;
+  color: black;
 }
 .form-contact .register__input--username {
   margin-bottom: 2rem;

@@ -45,6 +45,22 @@ html {
 		align-items: center;
 		padding: 4rem;
 	}
+
+	&__back {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+
+		i {
+			color: $white;
+			font-size: 22px;
+			transition: color 0.3s;
+		}
+
+		i:hover {
+			color: $secondary;
+		}
+	}
 }
 
 .wrapper {
@@ -131,6 +147,11 @@ html {
 		border-radius: 2px;
 		padding: 10px 30px;
 		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	.register__btn:hover {
+		background-color: $white;
+		color: black;
 	}
 
 	.register__input--username {

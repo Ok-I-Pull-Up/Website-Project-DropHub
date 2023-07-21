@@ -22,6 +22,7 @@ html {
 }
 
 .login {
+	position: relative;
 	height: 100vh; //temporary
 	display: flex;
 	justify-content: center;
@@ -38,6 +39,22 @@ html {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+
+	&__back {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+
+		i {
+			color: $white;
+			font-size: 22px;
+			transition: color 0.3s;
+		}
+
+		i:hover {
+			color: $secondary;
+		}
+	}
 
 	&__form {
 		display: flex;
@@ -79,18 +96,18 @@ html {
 	}
 
 	.login__title {
-		text-align: center;
 		margin-bottom: 3.2rem;
-		color: #fff;
 		padding-top: 20px;
+		text-align: center;
+		color: #fff;
 	}
 
 	.input-form {
 		width: 100%;
 		border: 0;
 		background: transparent;
-		padding: 2px 0.5rem;
 		color: $white;
+		padding: 2px 0.5rem;
 
 		&:focus {
 			outline: none;
@@ -122,12 +139,18 @@ html {
 
 	.Login__btn {
 		margin-bottom: 3.2rem;
-		background: transparent;
-		border: 1px solid #ffffff9a;
-		color: $white;
-		border-radius: 2px;
 		padding: 10px 30px;
+		border: 1px solid #ffffff9a;
+		border-radius: 2px;
+		color: $white;
+		background: transparent;
+		transition: background-color 0.3s, color 0.3s;
 		cursor: pointer;
+	}
+
+	.Login__btn:hover {
+		background-color: $white;
+		color: black;
 	}
 
 	.login__input--username {

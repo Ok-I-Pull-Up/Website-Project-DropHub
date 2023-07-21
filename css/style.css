@@ -53,6 +53,10 @@ body {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -678,35 +682,71 @@ nav .navbar__mobile a:hover {
   top: 50%;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/footer-desktop.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0 15px black;
-}
 .footer__box {
   display: flex;
-  flex-direction: column;
+  margin: 10rem 0;
+}
+.footer__box .footer__box--left .footer__logo {
+  width: 90%;
+}
+.footer__box .footer__box--left .nav__links {
+  padding-top: 3rem;
+  display: flex;
+}
+.footer__box .footer__box--left .nav__links a {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  text-align: center;
+  text-decoration: none;
+  max-width: 30px;
+  padding: 7px;
+  color: #fff;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-right: 20px;
 }
-.footer__box a {
-  padding-top: 2rem;
-  width: 50%;
+.footer__box .footer__box--left .nav__links a .fa-brands {
+  font-size: 14px;
 }
-.footer__box img {
-  width: 80%;
-  margin-bottom: 1.5rem;
+.footer__box .footer__box--left .footer__text--bottom {
+  display: flex;
 }
-.footer__box .footer__copyright {
-  font-size: 1.4rem;
+.footer__box .footer__text--bottom {
+  display: flex;
+  flex-direction: column;
+}
+.footer__box .footer__box--right {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 30rem;
+}
+.footer__box .footer__box--right .footer__column--product,
+.footer__box .footer__box--right .footer__column--company,
+.footer__box .footer__box--right .footer__column--resources {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  font-size: 20px;
+}
+.footer__box .footer__box--right .footer__column--product h2,
+.footer__box .footer__box--right .footer__column--company h2,
+.footer__box .footer__box--right .footer__column--resources h2 {
+  color: #a42312;
+  font-size: 16px;
+}
+.footer__box .footer__box--right .footer__column--product a,
+.footer__box .footer__box--right .footer__column--company a,
+.footer__box .footer__box--right .footer__column--resources a {
+  padding: 5px 0;
+  color: #fff;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -899,10 +939,10 @@ nav .navbar__mobile a:hover {
     left: 25%;
   }
   .about .icons:nth-child(3) {
-    left: 70%;
+    left: 72%;
   }
   .about .icons:nth-child(4) {
-    left: 62%;
+    left: 72%;
   }
   .about__block {
     width: 70%;
@@ -914,13 +954,14 @@ nav .navbar__mobile a:hover {
     margin-right: 25%;
   }
   .faq .icons:nth-child(2) {
+    top: 60%;
     left: 74%;
   }
   .faq .icons:nth-child(3) {
     left: 21%;
   }
   .faq .icons:nth-child(4) {
-    left: 31%;
+    left: 25%;
   }
   .faq .about__block {
     margin: 5%;
