@@ -685,68 +685,73 @@ nav .navbar__mobile a:hover {
 .footer__box {
   display: flex;
   margin: 10rem 0;
+  width: 100%;
 }
-.footer__box .footer__box--left .footer__logo {
-  width: 90%;
+.footer__box-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem;
 }
-.footer__box .footer__box--left .nav__links {
+.footer__box-left .footer__logo {
+  width: 45%;
+}
+.footer__box-left .footer__links {
   padding-top: 3rem;
   display: flex;
 }
-.footer__box .footer__box--left .nav__links a {
+.footer__box-left .footer__links a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  max-width: 30px;
-  padding: 7px;
+  max-width: 3rem;
+  padding: 0.7rem;
   color: #fff;
-  border: 1px solid rgba(255, 0, 0, 0.5);
+  border: 1px solid #a42312;
   border-radius: 5px;
-  margin-right: 20px;
+  margin-right: 2rem;
+  transition: background-color 0.3s;
 }
-.footer__box .footer__box--left .nav__links a .fa-brands {
-  font-size: 14px;
+.footer__box-left .footer__links a:hover {
+  background-color: #a42312;
 }
-.footer__box .footer__box--left .footer__text--bottom {
-  display: flex;
+.footer__box-left .footer__links a .fa-brands {
+  font-size: 1.4rem;
 }
-.footer__box .footer__text--bottom {
-  display: flex;
-  flex-direction: column;
-}
-.footer__box .footer__box--right {
+.footer__box-right {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 50%;
   margin-left: 30rem;
 }
-.footer__box .footer__box--right .footer__column--product,
-.footer__box .footer__box--right .footer__column--company,
-.footer__box .footer__box--right .footer__column--resources {
+.footer__column {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  font-size: 20px;
+  padding: 0 2rem;
+  font-size: 2rem;
 }
-.footer__box .footer__box--right .footer__column--product h2,
-.footer__box .footer__box--right .footer__column--company h2,
-.footer__box .footer__box--right .footer__column--resources h2 {
+.footer__column h2 {
   color: #a42312;
-  font-size: 16px;
+  font-size: 1.6rem;
+  cursor: default;
 }
-.footer__box .footer__box--right .footer__column--product a,
-.footer__box .footer__box--right .footer__column--company a,
-.footer__box .footer__box--right .footer__column--resources a {
-  padding: 5px 0;
+.footer__column a {
+  padding: 0.5rem 0;
+  white-space: nowrap;
   color: #fff;
+  transition: color 0.3s;
 }
-
+.footer__column a:hover {
+  color: #acacac;
+}
 .footer__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 576px) {
