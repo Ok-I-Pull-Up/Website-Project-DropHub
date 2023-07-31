@@ -17,4 +17,14 @@
 			padding-left: 10%;
 		}
 	}
+
+	.footer {
+		&__box {
+			&-left {
+				.footer__logo {
+					width: 30%;
+				}
+			}
+		}
+	}
 }

@@ -16,12 +16,18 @@
 
 	.footer {
 		&__box {
-			a {
-				width: 50%;
+			&-left {
+				.footer__logo {
+					width: 80%;
+				}
+
+				a {
+					width: 50%;
+				}
 			}
 
-			img {
-				width: 50%;
+			&-right {
+				margin-left: 30rem;
 			}
 		}
 	}
