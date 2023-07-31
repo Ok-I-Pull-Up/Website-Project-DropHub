@@ -302,22 +302,22 @@
 
 	.footer {
 		&__box {
-			a {
-				width: 50%;
+			&-left {
+				width: 30%;
+
+				.footer__logo {
+					width: 80%;
+				}
 			}
 
-			img {
+			&-right {
+				display: flex;
 				width: 70%;
 			}
+		}
 
-			.footer__middle {
-				font-size: 2.5rem;
-				margin-bottom: 3rem;
-			}
-
-			.footer__copyright {
-				font-size: 1.9rem;
-			}
+		&__copyright {
+			font-size: 1.9rem;
 		}
 	}
 }

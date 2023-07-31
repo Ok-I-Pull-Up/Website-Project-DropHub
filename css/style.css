@@ -690,12 +690,13 @@ nav .navbar__mobile a:hover {
 .footer__box-left {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   padding: 2rem;
 }
 .footer__box-left .footer__logo {
-  width: 45%;
+  width: 50%;
 }
 .footer__box-left .footer__links {
   padding-top: 3rem;
@@ -711,7 +712,7 @@ nav .navbar__mobile a:hover {
   color: #fff;
   border: 1px solid #a42312;
   border-radius: 5px;
-  margin-right: 2rem;
+  margin: 1rem;
   transition: background-color 0.3s;
 }
 .footer__box-left .footer__links a:hover {
@@ -721,10 +722,9 @@ nav .navbar__mobile a:hover {
   font-size: 1.4rem;
 }
 .footer__box-right {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   width: 50%;
-  margin-left: 30rem;
 }
 .footer__column {
   display: flex;
@@ -754,6 +754,142 @@ nav .navbar__mobile a:hover {
   font-size: 1.5rem;
 }
 
+.otherSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(13, 27, 39) 0%, rgb(13, 14, 39) 39%, rgb(11, 10, 29) 71%, rgb(9, 18, 27) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.otherSection__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+}
+.otherSection__back i {
+  color: #fff;
+  font-size: 4rem;
+  transition: color 0.3s;
+}
+.otherSection__back:hover i {
+  color: #a42312;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.login a {
+  color: #87ceeb;
+  transition: color 0.3s;
+}
+.login a:hover {
+  color: #6398ad;
+}
+.login__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 3rem 5rem;
+}
+.login__form-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.login__form-circle i {
+  font-size: 4rem;
+  color: #fff;
+}
+.login__title {
+  margin-bottom: 3.2rem;
+  padding-top: 1rem;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #fff;
+}
+.login__inputBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+.login__inputBox .fa-solid {
+  font-size: 1.4rem;
+  color: #fff;
+}
+.login__inputBox .login__input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  padding: 2px 0.5rem;
+  font-size: 1.4rem;
+}
+.login__inputBox .login__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+.login__inputBox .login__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+.login__inputBox .login__input:focus {
+  outline: none;
+}
+.login__inputBox .login__error {
+  display: inline;
+  font-size: 1.4rem;
+}
+.login__inputBox:nth-last-child(4) {
+  margin-bottom: 0.8rem;
+}
+.login__helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3.2rem;
+  font-size: 1.2rem;
+}
+.login__helper a {
+  text-align: right;
+}
+.login__helper .login__checkbox {
+  margin: 0;
+  width: 1.4rem;
+}
+.login__btn {
+  margin-bottom: 3.2rem;
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  background: transparent;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.login__btn:hover {
+  background-color: #fff;
+  color: black;
+}
+
 @media (min-width: 576px) {
   nav .navbar__logo img {
     width: 50%;
@@ -761,6 +897,9 @@ nav .navbar__mobile a:hover {
   .header__text {
     padding-right: 5%;
     padding-left: 10%;
+  }
+  .footer__box-left .footer__logo {
+    width: 30%;
   }
 }
 @media (min-width: 772px) {
@@ -999,17 +1138,17 @@ nav .navbar__mobile a:hover {
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer__box a {
-    width: 50%;
+  .footer__box-left {
+    width: 30%;
   }
-  .footer__box img {
+  .footer__box-left .footer__logo {
+    width: 80%;
+  }
+  .footer__box-right {
+    display: flex;
     width: 70%;
   }
-  .footer__box .footer__middle {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-  .footer__box .footer__copyright {
+  .footer__copyright {
     font-size: 1.9rem;
   }
 }
@@ -1021,10 +1160,13 @@ nav .navbar__mobile a:hover {
     font-size: 2rem;
     color: #87ceeb;
   }
-  .footer__box a {
+  .footer__box-left .footer__logo {
+    width: 80%;
+  }
+  .footer__box-left a {
     width: 50%;
   }
-  .footer__box img {
-    width: 50%;
+  .footer__box-right {
+    margin-left: 30rem;
   }
 }/*# sourceMappingURL=style.css.map */

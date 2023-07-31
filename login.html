@@ -1,65 +1,55 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>login</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&family=League+Spartan:wght@300;400;700&family=Open+Sans:wght@300;400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Electrolize&family=League+Spartan:wght@300;400;700&family=Open+Sans:wght@300;400;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/login.css">
-</head>
+	<body>
+		<main>
+			<section class="otherSection">
+				<a class="otherSection__back" href="index.html"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
 
-<body>
-    <main>
+				<div class="wrapper">
+					<div class="login">
+						<form class="login__form" action="">
+							<div class="login__form-circle"><i class="fa-solid fa-user"></i></div>
+							<h2 class="login__title">Sign in</h2>
 
-        <section class="login">
-            <a class="login__back" href="index.html"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
-            <div class="wrapper">
+							<div class="login__inputBox">
+								<i class="fa-solid fa-user"></i>
+								<input class="login__input" type="text" placeholder="Username..." />
+								<p class="login__error">Error:</p>
+							</div>
 
-                <div class="login__form">
-                    <form class="form-contact" action="">
-                        <div class="box-circle"><i class="fa-solid fa-user"></i></div>
-                        <h2 class="login__title">Sign in</h2>
+							<div class="login__inputBox">
+								<i class="fa-solid fa-lock"></i>
+								<input class="login__input" type="password" placeholder="Password..." />
+								<p class="login__error">Error:</p>
+							</div>
 
-                        <div class="login__input--username">
-                            <i class="fa-solid fa-user"></i>
-                            <input class="input-form" type="text" placeholder="Username">
-                            <p class="login__error--username">Error:</p>
-                        </div>
+							<div class="login__helper">
+								<label class="login__label"><input class="login__checkbox" type="checkbox" /> Remember me</label>
 
+								<a href="">Forgot password?</a>
+							</div>
 
-                        <div class="login__input--password">
-                            <i class="fa-solid fa-lock"></i>
-                            <input class="input-form" type="password" placeholder="Password">
-                            <p class="login__error--password">Error:</p>
-                        </div>
+							<button type="submit" class="login__btn">Login</button>
 
-                        <div class="box-helper-elements">
-                            <label class="login__label--text"><input class="login__checkbox" type="checkbox">
-                                Remember me</label>
-
-                            <a class="login__a--passwordrecovery" href="">Forgot password?</a>
-                        </div>
-                        <button type="submit" class="Login__btn">Login</button>
-                        <p class="login__a--register" href="">Don't have an account? <a class="register__link"
-                                href="register.html">Sign up</a>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-</body>
-
+							<p href="">Don't have an account? <a class="login__link" href="register.html">Sign up</a></p>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
