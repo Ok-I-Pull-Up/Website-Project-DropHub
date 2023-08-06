@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>login</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Electrolize&family=League+Spartan:wght@300;400;700&family=Open+Sans:wght@300;400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+
+	<body>
+		<main>
+			<section class="otherSection">
+				<a class="otherSection__back" href="index.html"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
+
+				<div class="wrapper">
+					<div class="background-image"></div>
+					<div class="terms">
+						<h2 class="terms__title">terms of service</h2>
+
+						<p class="terms__text"></p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			const bg1 = document.querySelector('body');
+			const bg2 = document.querySelector('.span');
+			const windowWidth = window.innerWidth / 5;
+			const windowHeight = window.innerHeight / 5;
+
+			bg1.addEventListener('mousemove', (e) => {
+				const mouseX = e.clientX / windowWidth;
+				const mouseY = e.clientY / windowHeight;
+
+				bg2.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+			});
+		</script>
+	</body>
+</html>

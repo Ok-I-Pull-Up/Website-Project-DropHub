@@ -773,7 +773,7 @@ nav .navbar__mobile a:hover {
 }
 .otherSection__back i {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   transition: color 0.3s;
 }
 .otherSection__back:hover i {
@@ -800,25 +800,25 @@ nav .navbar__mobile a:hover {
   flex-direction: column;
   border: 1px solid #fff;
   border-radius: 2px;
-  padding: 3rem 5rem;
+  padding: 1rem 2rem;
 }
 .login__form-circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
   border: 1px solid #fff;
   border-radius: 50%;
 }
 .login__form-circle i {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
 }
 .login__title {
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-top: 1rem;
-  font-size: 2.8rem;
+  font-size: 2rem;
   text-align: center;
   color: #fff;
 }
@@ -827,11 +827,11 @@ nav .navbar__mobile a:hover {
   align-items: center;
   width: 100%;
   padding: 0.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid #fff;
 }
 .login__inputBox .fa-solid {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #fff;
 }
 .login__inputBox .login__input {
@@ -840,7 +840,7 @@ nav .navbar__mobile a:hover {
   background: transparent;
   color: #fff;
   padding: 2px 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .login__inputBox .login__input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -854,153 +854,103 @@ nav .navbar__mobile a:hover {
   outline: none;
 }
 .login__inputBox .login__error {
-  display: inline;
-  font-size: 1.4rem;
+  display: none;
+  font-size: 1rem;
 }
 .login__inputBox:nth-last-child(4) {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 .login__helper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  margin-bottom: 3.2rem;
-  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
 }
 .login__helper a {
   text-align: right;
+  padding-left: 1rem;
+}
+.login__helper label {
+  padding-right: 1rem;
 }
 .login__helper .login__checkbox {
+  position: relative;
+  vertical-align: middle;
   margin: 0;
-  width: 1.4rem;
+  margin-top: -0.2rem;
+  width: 1.1rem;
 }
 .login__btn {
-  margin-bottom: 3.2rem;
-  padding: 10px 30px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #fff;
   border-radius: 2px;
   color: #fff;
   background: transparent;
   transition: background-color 0.3s, color 0.3s;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .login__btn:hover {
   background-color: #fff;
   color: black;
 }
-
-.pass-recovery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-}
-.pass-recovery a {
-  color: #87ceeb;
-  transition: color 0.3s;
-}
-.pass-recovery a:hover {
-  color: #6398ad;
-}
-.pass-recovery__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  padding: 3rem 5rem;
-}
-.pass-recovery__form-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7rem;
-  height: 7rem;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-.pass-recovery__form-circle i {
-  font-size: 4rem;
-  color: #fff;
-}
-.pass-recovery__title {
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  font-size: 2.8rem;
+.login__paragraph {
+  font-size: 1rem;
   text-align: center;
-  color: #fff;
 }
-.pass-recovery .pass-recovery__text {
-  margin-bottom: 3rem;
+.login__nowrap {
+  white-space: nowrap;
 }
-.pass-recovery__inputBox {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0.1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #fff;
+
+.register__helper a {
+  padding-left: 0;
 }
-.pass-recovery__inputBox .fa-solid {
-  font-size: 1.4rem;
-  color: #fff;
+.register__helper label {
+  padding-right: 0;
 }
-.pass-recovery__inputBox .pass-recovery__input {
-  width: 100%;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  padding: 2px 0.5rem;
-  font-size: 1.4rem;
+
+.recovery__title {
+  margin: 0.2rem;
 }
-.pass-recovery__inputBox .pass-recovery__input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+.recovery__text {
+  margin-bottom: 2rem;
+  text-align: center;
 }
-.pass-recovery__inputBox .pass-recovery__input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+.recovery__btn {
+  margin-top: 1rem;
 }
-.pass-recovery__inputBox .pass-recovery__input:focus {
-  outline: none;
+
+.terms {
+  text-align: center;
 }
-.pass-recovery__inputBox .pass-recovery__error {
-  display: inline;
-  font-size: 1.4rem;
+.terms__title {
+  font-size: 4rem;
+  text-transform: uppercase;
 }
-.pass-recovery__inputBox:nth-last-child(4) {
-  margin-bottom: 0.8rem;
+
+.found {
+  font-size: 10rem;
+  transition: opacity 0.3s;
 }
-.pass-recovery__helper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 3.2rem;
-  font-size: 1.2rem;
+.found:hover {
+  opacity: 1;
 }
-.pass-recovery__helper a {
-  text-align: right;
+.found__defaults {
+  color: #232f56;
+  opacity: 0.5;
+  cursor: default;
 }
-.pass-recovery__helper .pass-recovery__checkbox {
-  margin: 0;
-  width: 1.4rem;
+.found__text {
+  font-size: 5rem;
 }
-.pass-recovery__btn {
-  margin-top: 3.2rem;
-  padding: 10px 30px;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  color: #fff;
-  background: transparent;
-  transition: background-color 0.3s, color 0.3s;
-  cursor: pointer;
+.found__text p {
+  transition: opacity 0.3s;
 }
-.pass-recovery__btn:hover {
-  background-color: #fff;
-  color: black;
+.found__text p:hover {
+  opacity: 1;
 }
 
 @media (min-width: 576px) {
@@ -1263,6 +1213,67 @@ nav .navbar__mobile a:hover {
   }
   .footer__copyright {
     font-size: 1.9rem;
+  }
+  .otherSection__back i {
+    font-size: 4rem;
+  }
+  .login__form {
+    padding: 3rem 5rem;
+  }
+  .login__form-circle {
+    width: 7rem;
+    height: 7rem;
+  }
+  .login__form-circle i {
+    font-size: 4rem;
+  }
+  .login__title {
+    margin-bottom: 3.2rem;
+    font-size: 2.8rem;
+  }
+  .login__inputBox {
+    margin-bottom: 1rem;
+  }
+  .login__inputBox .fa-solid {
+    font-size: 1.4rem;
+  }
+  .login__inputBox .login__input {
+    font-size: 1.4rem;
+  }
+  .login__inputBox .login__error {
+    font-size: 1.4rem;
+  }
+  .login__inputBox:nth-last-child(4) {
+    margin-bottom: 0.8rem;
+  }
+  .login__helper {
+    margin-bottom: 3.2rem;
+    font-size: 1.5rem;
+  }
+  .login__helper .login__checkbox {
+    width: 1.4rem;
+  }
+  .login__btn {
+    margin-bottom: 3.2rem;
+    padding: 1rem 3rem;
+  }
+  .login__paragraph {
+    font-size: 1.5rem;
+  }
+  .recovery__title {
+    margin: 0.2rem;
+  }
+  .recovery__text {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .recovery__btn {
+    margin-top: 3rem;
+  }
+  .found {
+    font-size: 40rem;
+    margin-left: 10%;
+    margin-top: 5%;
   }
 }
 @media (min-width: 992px) {

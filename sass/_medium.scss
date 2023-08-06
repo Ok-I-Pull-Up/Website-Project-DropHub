@@ -320,4 +320,114 @@
 			font-size: 1.9rem;
 		}
 	}
+
+	////////////////////////////////////////////////////////////////////////////////
+	/// otherSection ///
+	.otherSection {
+		&__back {
+			i {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////////////////////
+	/// login ///
+
+	.login {
+		&__form {
+			padding: 3rem 5rem;
+
+			&-circle {
+				width: 7rem;
+				height: 7rem;
+
+				i {
+					font-size: 4rem;
+				}
+			}
+		}
+
+		&__title {
+			margin-bottom: 3.2rem;
+			font-size: 2.8rem;
+		}
+
+		&__inputBox {
+			margin-bottom: 1rem;
+
+			.fa-solid {
+				font-size: 1.4rem;
+			}
+
+			.login {
+				&__input {
+					font-size: 1.4rem;
+				}
+
+				&__error {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		&__inputBox:nth-last-child(4) {
+			margin-bottom: 0.8rem;
+		}
+
+		&__helper {
+			margin-bottom: 3.2rem;
+			font-size: 1.5rem;
+
+			.login {
+				&__checkbox {
+					width: 1.4rem;
+				}
+			}
+		}
+
+		&__btn {
+			margin-bottom: 3.2rem;
+			padding: 1rem 3rem;
+		}
+
+		&__paragraph {
+			font-size: 1.5rem;
+		}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////////////////////
+	/// Recovery ///
+
+	.recovery {
+		&__title {
+			margin: 0.2rem;
+		}
+
+		&__text {
+			margin-bottom: 3rem;
+			font-size: 1.5rem;
+		}
+
+		&__btn {
+			margin-top: 3rem;
+		}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////////////////////
+	/// 404 Found ///
+
+	.found {
+		font-size: 40rem;
+		margin-left: 10%;
+		margin-top: 5%;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
 }
