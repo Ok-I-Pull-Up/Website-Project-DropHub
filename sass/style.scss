@@ -564,7 +564,12 @@ nav {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../img/cards.png');
+	background-image: linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.8),
+			rgba(0, 0, 0, 0.1)
+		),
+		url('../img/cards.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -677,7 +682,13 @@ nav {
 
 		button {
 			width: 50%;
-			background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+			background: linear-gradient(
+					90deg,
+					$thirddarker,
+					transparent,
+					$thirddarker
+				)
+				$third;
 			opacity: 0.8;
 			padding: 1rem;
 			border-radius: 8px;
@@ -699,7 +710,8 @@ nav {
 	}
 
 	&__inputs {
-		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker)
+			$third;
 		border-radius: 8px;
 		padding: 1rem;
 		border: none;
@@ -767,7 +779,8 @@ nav {
 		transform: translate(-50%, -50%);
 		width: 600px;
 		height: 200px;
-		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker) $third;
+		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker)
+			$third;
 		border-radius: 8px;
 		border: 2px solid $primary;
 		transition: top 0.5s;
@@ -877,16 +890,30 @@ nav {
 
 ////////////////////////////////////////////////////////////////////////////////
 /// otherSection ///
+
+.otherSection__bgc {
+	background: radial-gradient(
+		circle,
+		rgba(13, 27, 39) 0%,
+		rgba(13, 14, 39) 39%,
+		rgba(11, 10, 29) 71%,
+		rgba(9, 18, 27) 100%
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .otherSection {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: radial-gradient(circle, rgba(13, 27, 39) 0%, rgba(13, 14, 39) 39%, rgba(11, 10, 29) 71%, rgba(9, 18, 27) 100%);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+
+	&__terms {
+		height: 120vh;
+	}
 
 	&__back {
 		position: absolute;
@@ -1101,10 +1128,20 @@ nav {
 /// Terms ///
 
 .terms {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	align-items: center;
+	height: 100vh;
+	font-size: 20px;
+	margin-top: 20rem;
+
+	li {
+		margin-bottom: 3rem;
+	}
 
 	&__title {
-		font-size: 4rem;
+		margin-bottom: 5rem;
 		text-transform: uppercase;
 	}
 }
