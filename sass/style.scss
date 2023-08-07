@@ -896,7 +896,7 @@ nav {
 
 		i {
 			color: $white;
-			font-size: 4rem;
+			font-size: 3rem;
 			transition: color 0.3s;
 		}
 
@@ -934,28 +934,28 @@ nav {
 		flex-direction: column;
 		border: 1px solid $white;
 		border-radius: 2px;
-		padding: 3rem 5rem;
+		padding: 1rem 2rem;
 
 		&-circle {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 7rem;
-			height: 7rem;
+			width: 5rem;
+			height: 5rem;
 			border: 1px solid $white;
 			border-radius: 50%;
 
 			i {
-				font-size: 4rem;
+				font-size: 3rem;
 				color: $white;
 			}
 		}
 	}
 
 	&__title {
-		margin-bottom: 3.2rem;
+		margin-bottom: 2rem;
 		padding-top: 1rem;
-		font-size: 2.8rem;
+		font-size: 2rem;
 		text-align: center;
 		color: $white;
 	}
@@ -965,11 +965,11 @@ nav {
 		align-items: center;
 		width: 100%;
 		padding: 0.1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 		border-bottom: 1px solid $white;
 
 		.fa-solid {
-			font-size: 1.4rem;
+			font-size: 1rem;
 			color: $white;
 		}
 
@@ -980,7 +980,7 @@ nav {
 				background: transparent;
 				color: $white;
 				padding: 2px 0.5rem;
-				font-size: 1.4rem;
+				font-size: 1rem;
 
 				&::placeholder {
 					color: rgb(255, 255, 255, 0.5);
@@ -993,44 +993,53 @@ nav {
 			}
 
 			&__error {
-				display: inline;
-				font-size: 1.4rem;
+				display: none;
+				font-size: 1rem;
 			}
 		}
 	}
 
 	&__inputBox:nth-last-child(4) {
-		margin-bottom: 0.8rem;
+		margin-bottom: 0.3rem;
 	}
 
 	&__helper {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		width: 100%;
-		margin-bottom: 3.2rem;
-		font-size: 1.2rem;
+		margin-bottom: 1.8rem;
+		font-size: 1.1rem;
 
 		a {
 			text-align: right;
+			padding-left: 1rem;
+		}
+
+		label {
+			padding-right: 1rem;
 		}
 
 		.login {
 			&__checkbox {
+				position: relative;
+				vertical-align: middle;
 				margin: 0;
-				width: 1.4rem;
+				margin-top: -0.2rem;
+				width: 1.1rem;
 			}
 		}
 	}
 
 	&__btn {
-		margin-bottom: 3.2rem;
-		padding: 10px 30px;
+		margin-bottom: 1rem;
+		padding: 0.5rem 1.5rem;
 		border: 1px solid $white;
 		border-radius: 2px;
 		color: $white;
 		background: transparent;
 		transition: background-color 0.3s, color 0.3s;
+		font-size: 1.2rem;
 		cursor: pointer;
 
 		&:hover {
@@ -1038,144 +1047,101 @@ nav {
 			color: black;
 		}
 	}
+
+	&__paragraph {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	&__nowrap {
+		white-space: nowrap;
+	}
 }
 
-//password-recovery //
+////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+/// Register ///
 
-.pass-recovery {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 2rem;
+.register {
+	&__helper {
+		a {
+			padding-left: 0;
+		}
 
-	a {
-		color: $third;
-		transition: color 0.3s;
-
-		&:hover {
-			color: $thirddarker;
+		label {
+			padding-right: 0;
 		}
 	}
+}
 
-	&__form {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		border: 1px solid $white;
-		border-radius: 2px;
-		padding: 3rem 5rem;
+////////////////////////////////////////////////////////////////////////////////
 
-		&-circle {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 7rem;
-			height: 7rem;
-			border: 1px solid $white;
-			border-radius: 50%;
+////////////////////////////////////////////////////////////////////////////////
+/// Recovery ///
 
-			i {
-				font-size: 4rem;
-				color: $white;
-			}
-		}
+.recovery {
+	&__title {
+		margin: 0.2rem;
 	}
+
+	&__text {
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	&__btn {
+		margin-top: 1rem;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+/// Terms ///
+
+.terms {
+	text-align: center;
 
 	&__title {
-		margin-bottom: 1rem;
-		padding-top: 1rem;
-		font-size: 2.8rem;
-		text-align: center;
-		color: $white;
+		font-size: 4rem;
+		text-transform: uppercase;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+/// 404 Found ///
+
+.found {
+	font-size: 10rem;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 1;
 	}
 
-	.pass-recovery__text {
-		margin-bottom: 3rem;
+	&__defaults {
+		color: $primarybrighter;
+		opacity: 0.5;
+		cursor: default;
 	}
 
-	&__inputBox {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		padding: 0.1rem;
-		margin-bottom: 1rem;
-		border-bottom: 1px solid $white;
+	&__text {
+		font-size: 5rem;
 
-		.fa-solid {
-			font-size: 1.4rem;
-			color: $white;
-		}
+		p {
+			transition: opacity 0.3s;
 
-		.pass-recovery {
-			&__input {
-				width: 100%;
-				border: 0;
-				background: transparent;
-				color: $white;
-				padding: 2px 0.5rem;
-				font-size: 1.4rem;
-
-				&::placeholder {
-					color: rgb(255, 255, 255, 0.5);
-					font-style: italic;
-				}
-
-				&:focus {
-					outline: none;
-				}
+			&:hover {
+				opacity: 1;
 			}
-
-			&__error {
-				display: inline;
-				font-size: 1.4rem;
-			}
-		}
-	}
-
-	&__inputBox:nth-last-child(4) {
-		margin-bottom: 0.8rem;
-	}
-
-	&__helper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		margin-bottom: 3.2rem;
-		font-size: 1.2rem;
-
-		a {
-			text-align: right;
-		}
-
-		.pass-recovery {
-			&__checkbox {
-				margin: 0;
-				width: 1.4rem;
-			}
-		}
-	}
-
-	&__btn {
-		margin-top: 3.2rem;
-		padding: 10px 30px;
-		border: 1px solid $white;
-		border-radius: 2px;
-		color: $white;
-		background: transparent;
-		transition: background-color 0.3s, color 0.3s;
-		cursor: pointer;
-
-		&:hover {
-			background-color: $white;
-			color: black;
 		}
 	}
 }
 
-
+////////////////////////////////////////////////////////////////////////////////
 
 @import 'small';
 @import 'medium';
