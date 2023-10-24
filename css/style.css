@@ -774,22 +774,16 @@ nav .navbar__mobile a:hover {
   font-size: 1.5rem;
 }
 
-.otherSection__bgc {
-  background: radial-gradient(circle, rgb(13, 27, 39) 0%, rgb(13, 14, 39) 39%, rgb(11, 10, 29) 71%, rgb(9, 18, 27) 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .otherSection {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.otherSection__terms {
-  height: 120vh;
+  background: radial-gradient(circle, rgb(13, 27, 39) 0%, rgb(13, 14, 39) 39%, rgb(11, 10, 29) 71%, rgb(9, 18, 27) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .otherSection__back {
   position: absolute;
@@ -950,19 +944,10 @@ nav .navbar__mobile a:hover {
 }
 
 .terms {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: center;
-  height: 100vh;
-  font-size: 20px;
-  margin-top: 20rem;
-}
-.terms li {
-  margin-bottom: 3rem;
+  text-align: center;
 }
 .terms__title {
-  margin-bottom: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
 }
 .terms__text {
