@@ -682,6 +682,7 @@ nav {
 
 		button {
 			width: 50%;
+			background-color: $fourth;
 			background: linear-gradient(
 					90deg,
 					$thirddarker,
@@ -696,8 +697,9 @@ nav {
 			font-size: 2.5rem;
 			cursor: pointer;
 			border: none;
-			color: $primary;
-			transition: color 0.3s, box-shadow 0.2s, background-color 0.3s;
+			outline: 1px solid rgb(255, 255, 255, 0.3);
+			color: $white;
+			transition: outline 0.3s, color 0.3s, box-shadow 0.2s, background-color 0.3s;
 			place-content: center;
 		}
 
@@ -706,28 +708,40 @@ nav {
 			background-color: $thirddarker;
 			box-shadow: 0 0 10px $thirddarker;
 			outline: none;
+			color: $primary;
 		}
 	}
 
 	&__inputs {
+		background-color: $fourth;
 		background: linear-gradient(90deg, $thirddarker, transparent, $thirddarker)
 			$third;
 		border-radius: 8px;
 		padding: 1rem;
 		border: none;
+		outline: 1px solid rgb(255, 255, 255, 0.3);
 		font-size: 2.5rem;
 		font-family: 'Open Sans', sans-serif;
-		transition: box-shadow 0.2s, background-color 0.3s;
+		transition: outline 0.3s, box-shadow 0.2s, background-color 0.3s;
 	}
 
 	&__inputs::placeholder {
-		color: $primary;
+		color: $white;
 	}
 
 	&__inputs:focus {
 		background-color: $thirddarker;
 		box-shadow: 0 0 10px $thirddarker;
 		outline: none;
+		color: $dark;
+
+		&::placeholder {
+			color: $primary;
+		}
+	}
+
+	&__inputs:not(:placeholder-shown) {
+		color: $white;
 	}
 
 	&__element {
@@ -801,9 +815,11 @@ nav {
 }
 
 .footer {
+	background-color: $primarydarker;
+
 	&__box {
 		display: flex;
-		margin: 10rem 0;
+		padding: 3rem 0;
 		width: 100%;
 
 		&-left {
@@ -883,6 +899,7 @@ nav {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top: 8rem;
 		padding-bottom: 2rem;
 		font-size: 1.5rem;
 	}
@@ -1143,6 +1160,10 @@ nav {
 	&__title {
 		margin-bottom: 5rem;
 		text-transform: uppercase;
+	}
+
+	&__text {
+		font-size: 2rem;
 	}
 }
 

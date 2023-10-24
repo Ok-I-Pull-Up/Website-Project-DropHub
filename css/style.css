@@ -585,7 +585,7 @@ nav .navbar__mobile a:hover {
 }
 .contact form button {
   width: 50%;
-  background: linear-gradient(90deg, #6398ad, transparent, #6398ad) #87ceeb;
+  background-color: rgba(21, 44, 64, 0.6);
   opacity: 0.8;
   padding: 1rem;
   border-radius: 8px;
@@ -593,8 +593,9 @@ nav .navbar__mobile a:hover {
   font-size: 2.5rem;
   cursor: pointer;
   border: none;
-  color: #0d1b27;
-  transition: color 0.3s, box-shadow 0.2s, background-color 0.3s;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: outline 0.3s, color 0.3s, box-shadow 0.2s, background-color 0.3s;
   place-content: center;
 }
 .contact form button:hover,
@@ -602,26 +603,41 @@ nav .navbar__mobile a:hover {
   background-color: #6398ad;
   box-shadow: 0 0 10px #6398ad;
   outline: none;
+  color: #0d1b27;
 }
 .contact__inputs {
-  background: linear-gradient(90deg, #6398ad, transparent, #6398ad) #87ceeb;
+  background-color: rgba(21, 44, 64, 0.6);
   border-radius: 8px;
   padding: 1rem;
   border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 2.5rem;
   font-family: "Open Sans", sans-serif;
-  transition: box-shadow 0.2s, background-color 0.3s;
+  transition: outline 0.3s, box-shadow 0.2s, background-color 0.3s;
 }
 .contact__inputs::-moz-placeholder {
-  color: #0d1b27;
+  color: #fff;
 }
 .contact__inputs::placeholder {
-  color: #0d1b27;
+  color: #fff;
 }
 .contact__inputs:focus {
   background-color: #6398ad;
   box-shadow: 0 0 10px #6398ad;
   outline: none;
+  color: #000;
+}
+.contact__inputs:focus::-moz-placeholder {
+  color: #0d1b27;
+}
+.contact__inputs:focus::placeholder {
+  color: #0d1b27;
+}
+.contact__inputs:not(:-moz-placeholder-shown) {
+  color: #fff;
+}
+.contact__inputs:not(:placeholder-shown) {
+  color: #fff;
 }
 .contact__element {
   display: flex;
@@ -682,9 +698,12 @@ nav .navbar__mobile a:hover {
   top: 50%;
 }
 
+.footer {
+  background-color: #09121b;
+}
 .footer__box {
   display: flex;
-  margin: 10rem 0;
+  padding: 3rem 0;
   width: 100%;
 }
 .footer__box-left {
@@ -750,6 +769,7 @@ nav .navbar__mobile a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8rem;
   padding-bottom: 2rem;
   font-size: 1.5rem;
 }
@@ -944,6 +964,9 @@ nav .navbar__mobile a:hover {
 .terms__title {
   margin-bottom: 5rem;
   text-transform: uppercase;
+}
+.terms__text {
+  font-size: 2rem;
 }
 
 .found {
