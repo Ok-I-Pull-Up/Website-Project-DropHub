@@ -61,3 +61,85 @@
 		</main>
 	</body>
 </html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>login</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Electrolize&family=League+Spartan:wght@300;400;700&family=Open+Sans:wght@300;400;700;800&display=swap"
+		rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="otherSection__bgc">
+	<main>
+		<section class="otherSection otherSection__terms">
+			<a class="otherSection__back" href="index.html"><i
+					class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
+
+			<div class="wrapper">
+				<div class="background-image"></div>
+				<div class="terms">
+					<h2 class="terms__title">terms of service</h2>
+					<ul>
+						<li>Akceptacja Warunków: Witamy na stronie internetowej Drophub. Korzystając z naszych usług,
+							wyrażasz zgodę na spełnienie i przestrzeganie niniejszych Warunków Świadczenia Usług. Jeśli
+							nie zgadzasz się z tymi warunkami, prosimy o zaprzestanie korzystania z naszej strony.</li>
+						<li>Opis Usługi: Drophub jest platformą internetową, która umożliwia użytkownikom uczestnictwo
+							w airdropach kryptowalut, czyli dystrybucji darmowych tokenów lub monet cyfrowych przez
+							różne projekty kryptowalutowe.</li>
+						<li>Warunki Użytkowania: a) Użytkownik musi mieć co najmniej 18 lat lub spełniać minimalny
+							wiek określony przez prawo swojego kraju, aby korzystać z naszej strony. <br> b) Użytkownik musi
+							zrozumieć, że akceptowanie airdropów odbywa się na własne ryzyko, a Drophub nie ponosi
+							odpowiedzialności za żadne straty finansowe czy bezpieczeństwo aktywów kryptograficznych. <br> c)
+							Użytkownik zobowiązuje się do dostarczenia dokładnych i aktualnych informacji podczas
+							rejestracji na naszej stronie. <br> d) Korzystanie z naszej strony w jakikolwiek sposób
+							naruszający prawo jest surowo zabronione.</li>
+						<li>Odpowiedzialność: a) Drophub dokłada wszelkich starań, aby dostarczyć wiarygodne
+							informacje o airdropach, ale nie gwarantuje ich dokładności ani aktualności. <br> b) Strona
+							internetowa Drophub nie ponosi odpowiedzialności za jakiekolwiek straty finansowe, jakie
+							użytkownik może ponieść w wyniku uczestnictwa w airdropach czy korzystania z naszej
+							platformy. <br> c) Użytkownik wyraża zgodę na korzystanie z naszej strony na własne ryzyko i
+							ponosi pełną odpowiedzialność za swoje działania.</li>
+						<li>Prywatność: a) Drophub szanuje prywatność użytkowników i gromadzi tylko niezbędne dane
+							zgodnie z naszą Polityką Prywatności. <br> b) Użytkownik wyraża zgodę na przetwarzanie swoich
+							danych osobowych zgodnie z Polityką Prywatności Drophub.</li>
+						<li>Zmiany w Warunkach: a) Drophub zastrzega sobie prawo do zmiany Warunków Świadczenia Usług
+							w dowolnym momencie. <br> b) Użytkownicy zostaną powiadomieni o wszelkich istotnych zmianach w
+							Warunkach poprzez zamieszczenie aktualizacji na stronie internetowej Drophub lub wysłanie
+							powiadomienia na adres e-mail podany podczas rejestracji.</li>
+						<li>Rozwiązanie Umowy: Użytkownik może w dowolnym momencie zrezygnować z korzystania z usług
+							Drophub, a Drophub ma prawo do zablokowania dostępu użytkownika do strony w przypadku
+							naruszenia Warunków Świadczenia Usług.</li>
+						<li>Postanowienia Końcowe: a) Niniejsze Warunki Świadczenia Usług stanowią całość umowy między
+							użytkownikiem a Drophub w sprawie korzystania z naszej platformy. <br> b) W przypadku konfliktu
+							między tłumaczeniami Warunków w różnych językach, obowiązuje wersja w języku angielskim.
+						</li>
+					</ul>
+
+					<p class="terms-bottom__text">Zapoznaj się z Warunkami Świadczenia Usług przed rozpoczęciem korzystania z platformy Drophub. Kontynuując korzystanie z naszej strony, akceptujesz te warunki.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		const bg1 = document.querySelector('body');
+		const bg2 = document.querySelector('.span');
+		const windowWidth = window.innerWidth / 5;
+		const windowHeight = window.innerHeight / 5;
+
+		bg1.addEventListener('mousemove', (e) => {
+			const mouseX = e.clientX / windowWidth;
+			const mouseY = e.clientY / windowHeight;
+
+			bg2.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+		});
+	</script>
+</body>
+
+</html>
